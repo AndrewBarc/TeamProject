@@ -1,0 +1,12 @@
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\bin\Debug\Practice.exe.config
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\bin\Debug\Practice.exe
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\bin\Debug\Practice.pdb
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\bin\Debug\Practice.xml
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.vbprojAssemblyReference.cache
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.Form1.resources
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.Resources.resources
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.vbproj.GenerateResource.cache
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.vbproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.exe
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.xml
+C:\Users\andre\Desktop\School Stuff\SD\project\Practice\Practice\obj\Debug\Practice.pdb
