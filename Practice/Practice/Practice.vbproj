@@ -74,17 +74,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Budget.Designer.vb">
-      <DependentUpon>Budget.vb</DependentUpon>
+    <Compile Include="Budgeting.Designer.vb">
+      <DependentUpon>Budgeting.vb</DependentUpon>
     </Compile>
-    <Compile Include="Budget.vb">
+    <Compile Include="Budgeting.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="TitlePage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="TitlePage.Designer.vb">
+      <DependentUpon>TitlePage.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -104,11 +104,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Budget.resx">
-      <DependentUpon>Budget.vb</DependentUpon>
+    <EmbeddedResource Include="Budgeting.resx">
+      <DependentUpon>Budgeting.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="TitlePage.resx">
+      <DependentUpon>TitlePage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
