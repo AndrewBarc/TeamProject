@@ -23,3 +23,16 @@ C:\Users\Wyatt Smith\Documents\School\OU\CS 3560\TeamProject\TeamProject\TeamPro
 C:\Users\Wyatt Smith\Documents\School\OU\CS 3560\TeamProject\TeamProject\TeamProject\Practice\Practice\obj\Debug\Practice.xml
 C:\Users\Wyatt Smith\Documents\School\OU\CS 3560\TeamProject\TeamProject\TeamProject\Practice\Practice\obj\Debug\Practice.pdb
 C:\Users\Wyatt Smith\Documents\School\OU\CS 3560\TeamProject\TeamProject\TeamProject\Practice\Practice\obj\Debug\Practice.Budgeting.resources
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\bin\Debug\Practice.exe.config
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\bin\Debug\Practice.exe
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\bin\Debug\Practice.pdb
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\bin\Debug\Practice.xml
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.vbprojAssemblyReference.cache
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.Budgeting.resources
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.TitlePage.resources
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.Resources.resources
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.vbproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.vbproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.exe
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.xml
+C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.pdb

@@ -13,5 +13,12 @@
         Next intCounter
         myFileWriter.Close()
         textFileStream.Close()
+        Dim test As String = "C:\Windows\Temp\test.csv"
+
+        If System.IO.File.Exists(test) = True Then
+            Process.Start(test)
+        Else
+            MsgBox("File Does Not Exist")
+        End If
     End Sub
 End Class
