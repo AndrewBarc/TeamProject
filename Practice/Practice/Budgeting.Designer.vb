@@ -22,7 +22,7 @@ Partial Class Budgeting
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.AddTransaction = New System.Windows.Forms.Button()
         Me.Categories = New System.Windows.Forms.ComboBox()
         Me.TransactionAmount = New System.Windows.Forms.TextBox()
@@ -43,7 +43,7 @@ Partial Class Budgeting
         'Categories
         '
         Me.Categories.FormattingEnabled = True
-        Me.Categories.Items.AddRange(New Object() {"Groceries", "Clothes", "Transportation", "School", "Entertainment"})
+        Me.Categories.Items.AddRange(New Object() {"Groceries", "Clothing", "Transportation", "School", "Entertainment", "Rent/bills"})
         Me.Categories.Location = New System.Drawing.Point(113, 22)
         Me.Categories.Name = "Categories"
         Me.Categories.Size = New System.Drawing.Size(121, 21)
@@ -59,7 +59,7 @@ Partial Class Budgeting
         'TransactionList
         '
         Me.TransactionList.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TransactionList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
+        Me.TransactionList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem3})
         Me.TransactionList.Location = New System.Drawing.Point(13, 51)
         Me.TransactionList.Name = "TransactionList"
         Me.TransactionList.Size = New System.Drawing.Size(314, 107)
