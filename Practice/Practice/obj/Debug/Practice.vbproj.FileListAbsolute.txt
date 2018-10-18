@@ -36,3 +36,17 @@ C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice
 C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.exe
 C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.xml
 C:\Users\andre\Documents\GitHub\TeamProject\Practice\Practice\obj\Debug\Practice.pdb
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\bin\Debug\Practice.exe.config
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\bin\Debug\Practice.exe
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\bin\Debug\Practice.pdb
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\bin\Debug\Practice.xml
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.vbprojAssemblyReference.cache
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.Budgeting.resources
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.Calendar.resources
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.TitlePage.resources
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.Resources.resources
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.vbproj.GenerateResource.cache
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.vbproj.CoreCompileInputs.cache
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.exe
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.xml
+C:\Users\DaftPunk\Source\Repos\TeamProject\Practice\Practice\obj\Debug\Practice.pdb

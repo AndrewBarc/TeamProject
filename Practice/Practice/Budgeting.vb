@@ -21,4 +21,12 @@
             MsgBox("File Does Not Exist")
         End If
     End Sub
+
+    Private Sub OtherList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OtherList.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Categories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Categories.SelectedIndexChanged
+
+    End Sub
 End Class

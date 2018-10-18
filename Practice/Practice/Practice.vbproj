@@ -80,6 +80,12 @@
     <Compile Include="Budgeting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Calendar.Designer.vb">
+      <DependentUpon>Calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TitlePage.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Budgeting.resx">
       <DependentUpon>Budgeting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitlePage.resx">
       <DependentUpon>TitlePage.vb</DependentUpon>
