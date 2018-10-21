@@ -10,4 +10,8 @@
     Private Sub ButtonReports_Click(sender As Object, e As EventArgs) Handles ButtonReports.Click
         Reports.Show()
     End Sub
+
+    Private Sub ButtonAddTransaction_Click(sender As Object, e As EventArgs) Handles ButtonAddTransaction.Click
+        ListBoxTransactions.Items.Add(item:=MaskedTextBoxTransactionDate.Text)
+    End Sub
 End Class
