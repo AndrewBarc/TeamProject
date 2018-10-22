@@ -86,6 +86,7 @@
     <Compile Include="Calendar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaction.vb" />
     <Compile Include="Reports\MonthReport.Designer.vb">
       <DependentUpon>MonthReport.vb</DependentUpon>
     </Compile>
