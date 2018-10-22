@@ -38,12 +38,14 @@ Partial Class YearReport
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BuildReport, 0, 2)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 1)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(333, 88)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(444, 108)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Year
@@ -51,27 +53,30 @@ Partial Class YearReport
         Me.Year.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Year.FormattingEnabled = True
         Me.Year.Items.AddRange(New Object() {"2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"})
-        Me.Year.Location = New System.Drawing.Point(106, 16)
+        Me.Year.Location = New System.Drawing.Point(142, 21)
+        Me.Year.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Year.Name = "Year"
-        Me.Year.Size = New System.Drawing.Size(121, 21)
+        Me.Year.Size = New System.Drawing.Size(160, 24)
         Me.Year.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(118, 0)
+        Me.Label1.Location = New System.Drawing.Point(158, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 13)
+        Me.Label1.Size = New System.Drawing.Size(128, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Please Select Year"
         '
         'BuildReport
         '
         Me.BuildReport.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BuildReport.Location = New System.Drawing.Point(3, 43)
+        Me.BuildReport.Location = New System.Drawing.Point(4, 53)
+        Me.BuildReport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BuildReport.Name = "BuildReport"
-        Me.BuildReport.Size = New System.Drawing.Size(327, 42)
+        Me.BuildReport.Size = New System.Drawing.Size(436, 52)
         Me.BuildReport.TabIndex = 2
         Me.BuildReport.Text = "Build Report"
         Me.BuildReport.UseVisualStyleBackColor = True
@@ -81,18 +86,21 @@ Partial Class YearReport
         Me.Report.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Report.FormattingEnabled = True
-        Me.Report.Location = New System.Drawing.Point(1, 91)
+        Me.Report.ItemHeight = 16
+        Me.Report.Location = New System.Drawing.Point(1, 112)
+        Me.Report.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Report.Name = "Report"
-        Me.Report.Size = New System.Drawing.Size(333, 368)
+        Me.Report.Size = New System.Drawing.Size(443, 452)
         Me.Report.TabIndex = 1
         '
         'YearReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(333, 456)
+        Me.ClientSize = New System.Drawing.Size(444, 561)
         Me.Controls.Add(Me.Report)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "YearReport"
         Me.Text = "YearReport"
         Me.TableLayoutPanel1.ResumeLayout(False)
