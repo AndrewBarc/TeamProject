@@ -34,15 +34,15 @@ Partial Class TitlePage
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.RadioButtonIncome = New System.Windows.Forms.RadioButton()
         Me.RadioButtonOutcome = New System.Windows.Forms.RadioButton()
+        Me.ButtonAddTransaction = New System.Windows.Forms.Button()
+        Me.MaskedTextBoxTransactionDate = New System.Windows.Forms.MaskedTextBox()
         Me.BoxMenu = New System.Windows.Forms.GroupBox()
         Me.LayoutPanelMenu = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonHelp = New System.Windows.Forms.Button()
         Me.ButtonReports = New System.Windows.Forms.Button()
         Me.ButtonCalendar = New System.Windows.Forms.Button()
         Me.ButtonBudgeting = New System.Windows.Forms.Button()
-        Me.ButtonAddTransaction = New System.Windows.Forms.Button()
         Me.ListBoxTransactions = New System.Windows.Forms.ListBox()
-        Me.MaskedTextBoxTransactionDate = New System.Windows.Forms.MaskedTextBox()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -182,7 +182,7 @@ Partial Class TitlePage
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(243, 29)
         Me.TableLayoutPanel2.TabIndex = 5
         '
@@ -209,6 +209,27 @@ Partial Class TitlePage
         Me.RadioButtonOutcome.TabStop = True
         Me.RadioButtonOutcome.Text = "Outcome"
         Me.RadioButtonOutcome.UseVisualStyleBackColor = True
+        '
+        'ButtonAddTransaction
+        '
+        Me.ButtonAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ButtonAddTransaction.Location = New System.Drawing.Point(3, 248)
+        Me.ButtonAddTransaction.Name = "ButtonAddTransaction"
+        Me.ButtonAddTransaction.Size = New System.Drawing.Size(243, 67)
+        Me.ButtonAddTransaction.TabIndex = 7
+        Me.ButtonAddTransaction.Text = "Add Transaction"
+        Me.ButtonAddTransaction.UseVisualStyleBackColor = True
+        '
+        'MaskedTextBoxTransactionDate
+        '
+        Me.MaskedTextBoxTransactionDate.Dock = System.Windows.Forms.DockStyle.Top
+        Me.MaskedTextBoxTransactionDate.Location = New System.Drawing.Point(3, 213)
+        Me.MaskedTextBoxTransactionDate.Mask = "00/00/0000"
+        Me.MaskedTextBoxTransactionDate.Name = "MaskedTextBoxTransactionDate"
+        Me.MaskedTextBoxTransactionDate.Size = New System.Drawing.Size(243, 20)
+        Me.MaskedTextBoxTransactionDate.TabIndex = 8
+        Me.MaskedTextBoxTransactionDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MaskedTextBoxTransactionDate.ValidatingType = GetType(Date)
         '
         'BoxMenu
         '
@@ -260,7 +281,7 @@ Partial Class TitlePage
         Me.ButtonReports.Name = "ButtonReports"
         Me.ButtonReports.Size = New System.Drawing.Size(229, 59)
         Me.ButtonReports.TabIndex = 2
-        Me.ButtonReports.Text = "Finacial Reports"
+        Me.ButtonReports.Text = "Financial Reports"
         Me.ButtonReports.UseVisualStyleBackColor = True
         '
         'ButtonCalendar
@@ -285,16 +306,6 @@ Partial Class TitlePage
         Me.ButtonBudgeting.Text = "Budgeting"
         Me.ButtonBudgeting.UseVisualStyleBackColor = True
         '
-        'ButtonAddTransaction
-        '
-        Me.ButtonAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonAddTransaction.Location = New System.Drawing.Point(3, 248)
-        Me.ButtonAddTransaction.Name = "ButtonAddTransaction"
-        Me.ButtonAddTransaction.Size = New System.Drawing.Size(243, 67)
-        Me.ButtonAddTransaction.TabIndex = 7
-        Me.ButtonAddTransaction.Text = "Add Transaction"
-        Me.ButtonAddTransaction.UseVisualStyleBackColor = True
-        '
         'ListBoxTransactions
         '
         Me.ListBoxTransactions.Dock = System.Windows.Forms.DockStyle.Fill
@@ -305,17 +316,6 @@ Partial Class TitlePage
         Me.ListBoxTransactions.Size = New System.Drawing.Size(342, 337)
         Me.ListBoxTransactions.Sorted = True
         Me.ListBoxTransactions.TabIndex = 2
-        '
-        'MaskedTextBoxTransactionDate
-        '
-        Me.MaskedTextBoxTransactionDate.Dock = System.Windows.Forms.DockStyle.Top
-        Me.MaskedTextBoxTransactionDate.Location = New System.Drawing.Point(3, 213)
-        Me.MaskedTextBoxTransactionDate.Mask = "00/00/0000"
-        Me.MaskedTextBoxTransactionDate.Name = "MaskedTextBoxTransactionDate"
-        Me.MaskedTextBoxTransactionDate.Size = New System.Drawing.Size(243, 20)
-        Me.MaskedTextBoxTransactionDate.TabIndex = 8
-        Me.MaskedTextBoxTransactionDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MaskedTextBoxTransactionDate.ValidatingType = GetType(Date)
         '
         'TitlePage
         '

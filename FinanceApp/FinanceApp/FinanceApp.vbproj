@@ -86,10 +86,22 @@
     <Compile Include="Calendar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports.Designer.vb">
-      <DependentUpon>Reports.vb</DependentUpon>
+    <Compile Include="Reports\MonthReport.Designer.vb">
+      <DependentUpon>MonthReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports.vb">
+    <Compile Include="Reports\MonthReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportMenu.Designer.vb">
+      <DependentUpon>ReportMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SpecificReport.Designer.vb">
+      <DependentUpon>SpecificReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SpecificReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TitlePage.vb">
@@ -114,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports\YearReport.Designer.vb">
+      <DependentUpon>YearReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\YearReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Budgeting.resx">
@@ -128,8 +146,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports.resx">
-      <DependentUpon>Reports.vb</DependentUpon>
+    <EmbeddedResource Include="Reports\ReportMenu.resx">
+      <DependentUpon>ReportMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\YearReport.resx">
+      <DependentUpon>YearReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitlePage.resx">
       <DependentUpon>TitlePage.vb</DependentUpon>
@@ -147,5 +168,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

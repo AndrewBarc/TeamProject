@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub ButtonReports_Click(sender As Object, e As EventArgs) Handles ButtonReports.Click
-        Reports.Show()
+        ReportMenu.Show()
     End Sub
 
     Private Sub ButtonAddTransaction_Click(sender As Object, e As EventArgs) Handles ButtonAddTransaction.Click
