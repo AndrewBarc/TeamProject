@@ -42,13 +42,14 @@ Partial Class TitlePage
         Me.ButtonReports = New System.Windows.Forms.Button()
         Me.ButtonCalendar = New System.Windows.Forms.Button()
         Me.ButtonBudgeting = New System.Windows.Forms.Button()
-        Me.ListBoxTransactions = New System.Windows.Forms.ListBox()
+        Me.DataTransactionList = New System.Windows.Forms.DataGridView()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.BoxMenu.SuspendLayout()
         Me.LayoutPanelMenu.SuspendLayout()
+        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpperContainer1
@@ -72,7 +73,7 @@ Partial Class TitlePage
         Me.LowerContainer1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.LowerContainer1.Controls.Add(Me.BoxAddTransaction, 0, 0)
         Me.LowerContainer1.Controls.Add(Me.BoxMenu, 2, 0)
-        Me.LowerContainer1.Controls.Add(Me.ListBoxTransactions, 1, 0)
+        Me.LowerContainer1.Controls.Add(Me.DataTransactionList, 1, 0)
         Me.LowerContainer1.Location = New System.Drawing.Point(12, 118)
         Me.LowerContainer1.Name = "LowerContainer1"
         Me.LowerContainer1.RowCount = 1
@@ -307,17 +308,14 @@ Partial Class TitlePage
         Me.ButtonBudgeting.Text = "Budgeting"
         Me.ButtonBudgeting.UseVisualStyleBackColor = True
         '
-        'ListBoxTransactions
+        'DataTransactionList
         '
-        Me.ListBoxTransactions.ColumnWidth = 80
-        Me.ListBoxTransactions.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBoxTransactions.FormattingEnabled = True
-        Me.ListBoxTransactions.Location = New System.Drawing.Point(264, 3)
-        Me.ListBoxTransactions.MultiColumn = True
-        Me.ListBoxTransactions.Name = "ListBoxTransactions"
-        Me.ListBoxTransactions.Size = New System.Drawing.Size(342, 337)
-        Me.ListBoxTransactions.Sorted = True
-        Me.ListBoxTransactions.TabIndex = 2
+        Me.DataTransactionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataTransactionList.Location = New System.Drawing.Point(264, 3)
+        Me.DataTransactionList.Name = "DataTransactionList"
+        Me.DataTransactionList.Size = New System.Drawing.Size(342, 337)
+        Me.DataTransactionList.TabIndex = 2
         '
         'TitlePage
         '
@@ -339,6 +337,7 @@ Partial Class TitlePage
         Me.TableLayoutPanel2.PerformLayout()
         Me.BoxMenu.ResumeLayout(False)
         Me.LayoutPanelMenu.ResumeLayout(False)
+        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -362,6 +361,6 @@ Partial Class TitlePage
     Friend WithEvents RadioButtonIncome As RadioButton
     Friend WithEvents RadioButtonOutcome As RadioButton
     Friend WithEvents ButtonAddTransaction As Button
-    Friend WithEvents ListBoxTransactions As ListBox
     Friend WithEvents MaskedTextBoxTransactionDate As MaskedTextBox
+    Friend WithEvents DataTransactionList As DataGridView
 End Class
