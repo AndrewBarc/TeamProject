@@ -24,8 +24,8 @@ Partial Class Calendar
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -54,16 +54,6 @@ Partial Class Calendar
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(242, 26)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Select a date below to view transactions from that day"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -80,6 +70,16 @@ Partial Class Calendar
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.93137!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(273, 408)
         Me.TableLayoutPanel2.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(242, 26)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Select a date below to view transactions from that day"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'MaskedTextBox1
         '

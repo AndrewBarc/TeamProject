@@ -13,5 +13,11 @@
 
     Private Sub ButtonAddTransaction_Click(sender As Object, e As EventArgs) Handles ButtonAddTransaction.Click
         ListBoxTransactions.Items.Add(item:=MaskedTextBoxTransactionDate.Text)
+        ListBoxTransactions.Items.Add(item:=TextBoxTransactionDescription.Text)
+    End Sub
+
+    Private Sub TextBoxTransactionDescription_Leave(sender As Object, e As EventArgs) Handles TextBoxTransactionDescription.Leave
+        Dim Money As Transaction = New Transaction()
+        Money.TDescription = TextBoxTransactionDescription.Text
     End Sub
 End Class

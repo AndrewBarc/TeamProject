@@ -153,6 +153,7 @@ Partial Class TitlePage
         '
         Me.TextBoxTransactionDescription.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBoxTransactionDescription.Location = New System.Drawing.Point(3, 38)
+        Me.TextBoxTransactionDescription.MaxLength = 40
         Me.TextBoxTransactionDescription.Name = "TextBoxTransactionDescription"
         Me.TextBoxTransactionDescription.Size = New System.Drawing.Size(243, 20)
         Me.TextBoxTransactionDescription.TabIndex = 0
@@ -308,6 +309,7 @@ Partial Class TitlePage
         '
         'ListBoxTransactions
         '
+        Me.ListBoxTransactions.ColumnWidth = 80
         Me.ListBoxTransactions.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBoxTransactions.FormattingEnabled = True
         Me.ListBoxTransactions.Location = New System.Drawing.Point(264, 3)
