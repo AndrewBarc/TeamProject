@@ -1,7 +1,7 @@
 ﻿Public Class TitlePage
 
     Dim Money As Transaction = New Transaction()
-    Dim count As Int16 = 1
+    Dim count As Integer = 1
 
     Private Sub TitlePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
@@ -27,46 +27,46 @@
     End Sub
 
     Private Sub TextBoxTransactionDescription_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTransactionDescription.TextChanged
-        Money.TDescription = TextBoxTransactionDescription.Text
+        UpdateTDescription()
     End Sub
 
-    Private Sub TextBoxTransactionAmount_Leave(sender As Object, e As EventArgs) Handles TextBoxTransactionAmount.Leave
-        Dim sign As Integer
-        If RadioButtonIncome.Checked Then
-            sign = 1
-        ElseIf RadioButtonExpense.Checked Then
-            sign = -1
-        End If
+    Private Sub TextBoxTransactionAmount_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTransactionAmount.TextChanged
+        UpdateTAmount()
+    End Sub
 
-        Money.TAmount = CDbl(TextBoxTransactionAmount.Text) * sign
+    Private Sub RadioButtonIncome_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonExpense.CheckedChanged
+        UpdateTAmount()
+    End Sub
 
+    Private Sub RadioButtonExpense_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonExpense.CheckedChanged
+        UpdateTAmount()
     End Sub
 
     Private Sub ComboBoxCategories_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCategories.SelectedValueChanged
-        Money.TCategory = ComboBoxCategories.Text
+        UpdateTCategory()
     End Sub
 
     Private Sub MaskedTextBoxTransactionDate_TextChanged(sender As Object, e As EventArgs) Handles MaskedTextBoxTransactionDate.TextChanged
-        Money.TDate = MaskedTextBoxTransactionDate.Text
+        UpdateTDate()
     End Sub
 
 #Region "Array"
     Dim TCollection As New List(Of Transaction)
 #End Region
 
-#Region "Functions"
+#Region "Data Table"
 
     Dim dt As New DataTable
 
     Sub AddColumnsToGridView()
 
+        dt.Columns.Add("ID")
+        dt.Columns(0).AutoIncrement = True
+
         dt.Columns.Add("Date")
         dt.Columns.Add("Description")
         dt.Columns.Add("Category")
         dt.Columns.Add("Amount")
-
-        dt.Columns.Add("ID")
-        dt.Columns(0).AutoIncrement = True
 
     End Sub
 
@@ -83,6 +83,36 @@
 
         DataTransactionList.DataSource = dt
 
+    End Sub
+
+#End Region
+
+#Region "Updating Transaction Variables"
+
+    Sub UpdateTAmount()
+        If TextBoxTransactionAmount.Text = "" Then
+            'Do Nothing
+        Else
+            Dim sign As Integer
+            If RadioButtonIncome.Checked Then
+                sign = 1
+            ElseIf RadioButtonExpense.Checked Then
+                sign = -1
+            End If
+            Money.TAmount = CDbl(TextBoxTransactionAmount.Text) * sign
+        End If
+    End Sub
+
+    Sub UpdateTDate()
+        Money.TDate = MaskedTextBoxTransactionDate.Text
+    End Sub
+
+    Sub UpdateTDescription()
+        Money.TDescription = TextBoxTransactionDescription.Text
+    End Sub
+
+    Sub UpdateTCategory()
+        Money.TCategory = ComboBoxCategories.Text
     End Sub
 
 #End Region
