@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.IO
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Calendar
     Inherits System.Windows.Forms.Form
 
@@ -104,10 +106,13 @@ Partial Class Calendar
         'DateTimePicker1
         '
         Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DateTimePicker1.Location = New System.Drawing.Point(27, 12)
+        Me.DateTimePicker1.CustomFormat = ""
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(83, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(88, 20)
         Me.DateTimePicker1.TabIndex = 0
+        Me.DateTimePicker1.Value = New Date(2018, 10, 31, 0, 0, 0, 0)
         '
         'Button1
         '
@@ -173,9 +178,17 @@ Partial Class Calendar
     Friend WithEvents Button1 As Button
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Dim ReadFile As String = "C:\Users\Public\Documents/data.txt"
+        'Dim read As TextReader = New StreamReader(ReadFile)
+        ' Dim line As String
+        ' Dim count As Integer = 0
 
     End Sub
 
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+
+    End Sub
 End Class
