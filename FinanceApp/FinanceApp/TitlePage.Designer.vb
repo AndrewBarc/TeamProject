@@ -45,6 +45,7 @@ Partial Class TitlePage
         Me.ButtonCalendar = New System.Windows.Forms.Button()
         Me.ButtonBudgeting = New System.Windows.Forms.Button()
         Me.DataTransactionList = New System.Windows.Forms.DataGridView()
+        Me.SaveButton = New System.Windows.Forms.Button()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -80,7 +81,7 @@ Partial Class TitlePage
         Me.LowerContainer1.Name = "LowerContainer1"
         Me.LowerContainer1.RowCount = 1
         Me.LowerContainer1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.LowerContainer1.Size = New System.Drawing.Size(870, 343)
+        Me.LowerContainer1.Size = New System.Drawing.Size(870, 322)
         Me.LowerContainer1.TabIndex = 1
         '
         'BoxAddTransaction
@@ -90,7 +91,7 @@ Partial Class TitlePage
         Me.BoxAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BoxAddTransaction.Location = New System.Drawing.Point(3, 3)
         Me.BoxAddTransaction.Name = "BoxAddTransaction"
-        Me.BoxAddTransaction.Size = New System.Drawing.Size(255, 337)
+        Me.BoxAddTransaction.Size = New System.Drawing.Size(255, 316)
         Me.BoxAddTransaction.TabIndex = 0
         Me.BoxAddTransaction.TabStop = False
         Me.BoxAddTransaction.Text = "Create a Transaction"
@@ -124,14 +125,14 @@ Partial Class TitlePage
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(249, 318)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(249, 297)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'LabelTransactionAmount
         '
         Me.LabelTransactionAmount.AutoSize = True
         Me.LabelTransactionAmount.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LabelTransactionAmount.Location = New System.Drawing.Point(3, 173)
+        Me.LabelTransactionAmount.Location = New System.Drawing.Point(3, 161)
         Me.LabelTransactionAmount.Name = "LabelTransactionAmount"
         Me.LabelTransactionAmount.Size = New System.Drawing.Size(243, 13)
         Me.LabelTransactionAmount.TabIndex = 13
@@ -143,9 +144,9 @@ Partial Class TitlePage
         Me.Panel1.Controls.Add(Me.RadioButtonExpense)
         Me.Panel1.Controls.Add(Me.RadioButtonIncome)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 127)
+        Me.Panel1.Location = New System.Drawing.Point(3, 119)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(243, 25)
+        Me.Panel1.Size = New System.Drawing.Size(243, 23)
         Me.Panel1.TabIndex = 12
         '
         'RadioButtonExpense
@@ -155,7 +156,7 @@ Partial Class TitlePage
         Me.RadioButtonExpense.Location = New System.Drawing.Point(147, 0)
         Me.RadioButtonExpense.Name = "RadioButtonExpense"
         Me.RadioButtonExpense.Padding = New System.Windows.Forms.Padding(0, 0, 30, 0)
-        Me.RadioButtonExpense.Size = New System.Drawing.Size(96, 25)
+        Me.RadioButtonExpense.Size = New System.Drawing.Size(96, 23)
         Me.RadioButtonExpense.TabIndex = 4
         Me.RadioButtonExpense.TabStop = True
         Me.RadioButtonExpense.Text = "Expense"
@@ -168,7 +169,7 @@ Partial Class TitlePage
         Me.RadioButtonIncome.Location = New System.Drawing.Point(0, 0)
         Me.RadioButtonIncome.Name = "RadioButtonIncome"
         Me.RadioButtonIncome.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.RadioButtonIncome.Size = New System.Drawing.Size(90, 25)
+        Me.RadioButtonIncome.Size = New System.Drawing.Size(90, 23)
         Me.RadioButtonIncome.TabIndex = 3
         Me.RadioButtonIncome.TabStop = True
         Me.RadioButtonIncome.Text = "Income"
@@ -178,7 +179,7 @@ Partial Class TitlePage
         '
         Me.LabelTransactionDate.AutoSize = True
         Me.LabelTransactionDate.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LabelTransactionDate.Location = New System.Drawing.Point(3, 235)
+        Me.LabelTransactionDate.Location = New System.Drawing.Point(3, 219)
         Me.LabelTransactionDate.Name = "LabelTransactionDate"
         Me.LabelTransactionDate.Size = New System.Drawing.Size(243, 13)
         Me.LabelTransactionDate.TabIndex = 4
@@ -188,7 +189,7 @@ Partial Class TitlePage
         'TextBoxTransactionAmount
         '
         Me.TextBoxTransactionAmount.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBoxTransactionAmount.Location = New System.Drawing.Point(3, 189)
+        Me.TextBoxTransactionAmount.Location = New System.Drawing.Point(3, 177)
         Me.TextBoxTransactionAmount.Name = "TextBoxTransactionAmount"
         Me.TextBoxTransactionAmount.Size = New System.Drawing.Size(243, 20)
         Me.TextBoxTransactionAmount.TabIndex = 2
@@ -196,7 +197,7 @@ Partial Class TitlePage
         'TextBoxTransactionDescription
         '
         Me.TextBoxTransactionDescription.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBoxTransactionDescription.Location = New System.Drawing.Point(3, 34)
+        Me.TextBoxTransactionDescription.Location = New System.Drawing.Point(3, 32)
         Me.TextBoxTransactionDescription.MaxLength = 40
         Me.TextBoxTransactionDescription.Name = "TextBoxTransactionDescription"
         Me.TextBoxTransactionDescription.Size = New System.Drawing.Size(243, 20)
@@ -206,7 +207,7 @@ Partial Class TitlePage
         '
         Me.LabelTransactionDescription.AutoSize = True
         Me.LabelTransactionDescription.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LabelTransactionDescription.Location = New System.Drawing.Point(3, 18)
+        Me.LabelTransactionDescription.Location = New System.Drawing.Point(3, 16)
         Me.LabelTransactionDescription.Name = "LabelTransactionDescription"
         Me.LabelTransactionDescription.Size = New System.Drawing.Size(243, 13)
         Me.LabelTransactionDescription.TabIndex = 1
@@ -216,9 +217,9 @@ Partial Class TitlePage
         'ButtonAddTransaction
         '
         Me.ButtonAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonAddTransaction.Location = New System.Drawing.Point(3, 282)
+        Me.ButtonAddTransaction.Location = New System.Drawing.Point(3, 264)
         Me.ButtonAddTransaction.Name = "ButtonAddTransaction"
-        Me.ButtonAddTransaction.Size = New System.Drawing.Size(243, 33)
+        Me.ButtonAddTransaction.Size = New System.Drawing.Size(243, 30)
         Me.ButtonAddTransaction.TabIndex = 6
         Me.ButtonAddTransaction.Text = "Add Transaction"
         Me.ButtonAddTransaction.UseVisualStyleBackColor = True
@@ -226,7 +227,7 @@ Partial Class TitlePage
         'MaskedTextBoxTransactionDate
         '
         Me.MaskedTextBoxTransactionDate.Dock = System.Windows.Forms.DockStyle.Top
-        Me.MaskedTextBoxTransactionDate.Location = New System.Drawing.Point(3, 251)
+        Me.MaskedTextBoxTransactionDate.Location = New System.Drawing.Point(3, 235)
         Me.MaskedTextBoxTransactionDate.Mask = "00/00/0000"
         Me.MaskedTextBoxTransactionDate.Name = "MaskedTextBoxTransactionDate"
         Me.MaskedTextBoxTransactionDate.Size = New System.Drawing.Size(243, 20)
@@ -238,7 +239,7 @@ Partial Class TitlePage
         '
         Me.LabelCategory.AutoSize = True
         Me.LabelCategory.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LabelCategory.Location = New System.Drawing.Point(3, 80)
+        Me.LabelCategory.Location = New System.Drawing.Point(3, 74)
         Me.LabelCategory.Name = "LabelCategory"
         Me.LabelCategory.Size = New System.Drawing.Size(243, 13)
         Me.LabelCategory.TabIndex = 9
@@ -250,7 +251,7 @@ Partial Class TitlePage
         Me.ComboBoxCategories.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ComboBoxCategories.FormattingEnabled = True
         Me.ComboBoxCategories.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Office", "Personal Care", "Pets", "Shopping", "Travel", "Job Income"})
-        Me.ComboBoxCategories.Location = New System.Drawing.Point(3, 96)
+        Me.ComboBoxCategories.Location = New System.Drawing.Point(3, 90)
         Me.ComboBoxCategories.Name = "ComboBoxCategories"
         Me.ComboBoxCategories.Size = New System.Drawing.Size(243, 21)
         Me.ComboBoxCategories.TabIndex = 1
@@ -262,7 +263,7 @@ Partial Class TitlePage
         Me.BoxMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BoxMenu.Location = New System.Drawing.Point(612, 3)
         Me.BoxMenu.Name = "BoxMenu"
-        Me.BoxMenu.Size = New System.Drawing.Size(255, 337)
+        Me.BoxMenu.Size = New System.Drawing.Size(255, 316)
         Me.BoxMenu.TabIndex = 1
         Me.BoxMenu.TabStop = False
         Me.BoxMenu.Text = "Menu"
@@ -283,16 +284,16 @@ Partial Class TitlePage
         Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.LayoutPanelMenu.Size = New System.Drawing.Size(249, 318)
+        Me.LayoutPanelMenu.Size = New System.Drawing.Size(249, 297)
         Me.LayoutPanelMenu.TabIndex = 0
         '
         'ButtonHelp
         '
         Me.ButtonHelp.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonHelp.Location = New System.Drawing.Point(10, 247)
+        Me.ButtonHelp.Location = New System.Drawing.Point(10, 232)
         Me.ButtonHelp.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonHelp.Name = "ButtonHelp"
-        Me.ButtonHelp.Size = New System.Drawing.Size(229, 61)
+        Me.ButtonHelp.Size = New System.Drawing.Size(229, 55)
         Me.ButtonHelp.TabIndex = 3
         Me.ButtonHelp.Text = "Help"
         Me.ButtonHelp.UseVisualStyleBackColor = True
@@ -300,10 +301,10 @@ Partial Class TitlePage
         'ButtonReports
         '
         Me.ButtonReports.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonReports.Location = New System.Drawing.Point(10, 168)
+        Me.ButtonReports.Location = New System.Drawing.Point(10, 158)
         Me.ButtonReports.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonReports.Name = "ButtonReports"
-        Me.ButtonReports.Size = New System.Drawing.Size(229, 59)
+        Me.ButtonReports.Size = New System.Drawing.Size(229, 54)
         Me.ButtonReports.TabIndex = 2
         Me.ButtonReports.Text = "Financial Reports"
         Me.ButtonReports.UseVisualStyleBackColor = True
@@ -311,10 +312,10 @@ Partial Class TitlePage
         'ButtonCalendar
         '
         Me.ButtonCalendar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonCalendar.Location = New System.Drawing.Point(10, 89)
+        Me.ButtonCalendar.Location = New System.Drawing.Point(10, 84)
         Me.ButtonCalendar.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonCalendar.Name = "ButtonCalendar"
-        Me.ButtonCalendar.Size = New System.Drawing.Size(229, 59)
+        Me.ButtonCalendar.Size = New System.Drawing.Size(229, 54)
         Me.ButtonCalendar.TabIndex = 1
         Me.ButtonCalendar.Text = "Calendar"
         Me.ButtonCalendar.UseVisualStyleBackColor = True
@@ -325,7 +326,7 @@ Partial Class TitlePage
         Me.ButtonBudgeting.Location = New System.Drawing.Point(10, 10)
         Me.ButtonBudgeting.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonBudgeting.Name = "ButtonBudgeting"
-        Me.ButtonBudgeting.Size = New System.Drawing.Size(229, 59)
+        Me.ButtonBudgeting.Size = New System.Drawing.Size(229, 54)
         Me.ButtonBudgeting.TabIndex = 0
         Me.ButtonBudgeting.Text = "Budgeting"
         Me.ButtonBudgeting.UseVisualStyleBackColor = True
@@ -336,15 +337,25 @@ Partial Class TitlePage
         Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataTransactionList.Location = New System.Drawing.Point(264, 3)
         Me.DataTransactionList.Name = "DataTransactionList"
-        Me.DataTransactionList.Size = New System.Drawing.Size(342, 337)
+        Me.DataTransactionList.Size = New System.Drawing.Size(342, 316)
         Me.DataTransactionList.TabIndex = 2
+        '
+        'SaveButton
+        '
+        Me.SaveButton.Location = New System.Drawing.Point(408, 446)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(78, 22)
+        Me.SaveButton.TabIndex = 2
+        Me.SaveButton.Text = "Save to file"
+        Me.SaveButton.UseVisualStyleBackColor = True
         '
         'TitlePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(894, 473)
+        Me.ClientSize = New System.Drawing.Size(894, 480)
+        Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.LowerContainer1)
         Me.Controls.Add(Me.UpperContainer1)
         Me.MinimumSize = New System.Drawing.Size(683, 384)
@@ -387,4 +398,5 @@ Partial Class TitlePage
     Friend WithEvents RadioButtonExpense As RadioButton
     Friend WithEvents RadioButtonIncome As RadioButton
     Friend WithEvents MaskedTextBoxTransactionDate As MaskedTextBox
+    Friend WithEvents SaveButton As Button
 End Class

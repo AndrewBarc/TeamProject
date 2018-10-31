@@ -1,4 +1,5 @@
-﻿Public Class TitlePage
+﻿Imports System.IO
+Public Class TitlePage
 
     Dim Money As Transaction = New Transaction()
     Dim count As Integer = 1
@@ -117,6 +118,41 @@
 
     Sub UpdateTCategory()
         Money.TCategory = ComboBoxCategories.Text
+    End Sub
+
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+
+        Dim writefile As String = "C:\Users\Public\Documents/data.txt"
+
+        If System.IO.File.Exists("C:\Users\Public\Documents/data.txt") = True Then
+            Dim newWriter As New System.IO.StreamWriter(writefile, True)
+            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
+                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
+                    newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
+                Next
+
+                newWriter.Write(vbCrLf)
+
+            Next
+            newWriter.Close()
+            MessageBox.Show("Data Saved")
+        Else
+            Dim write As TextWriter = New StreamWriter("C:\Users\Public\Documents/data.txt")
+            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
+                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
+                    write.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
+                Next
+
+                write.Write(vbCrLf)
+
+            Next
+            write.Close()
+            MessageBox.Show("Data Saved")
+        End If
+    End Sub
+
+    Private Sub DataTransactionList_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataTransactionList.CellContentClick
+
     End Sub
 
 #End Region
