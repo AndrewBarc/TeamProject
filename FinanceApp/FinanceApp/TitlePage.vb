@@ -185,6 +185,10 @@ Public Class TitlePage
         End If
     End Sub
 
+    Private Sub UpperContainer1_Paint(sender As Object, e As PaintEventArgs) Handles UpperContainer1.Paint
+
+    End Sub
+
 #End Region
 
 End Class
