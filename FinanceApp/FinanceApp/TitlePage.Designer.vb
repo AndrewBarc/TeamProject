@@ -23,6 +23,8 @@ Partial Class TitlePage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.UpperContainer1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Title = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.LowerContainer1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BoxAddTransaction = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -47,8 +49,6 @@ Partial Class TitlePage
         Me.DataTransactionList = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Save = New System.Windows.Forms.Button()
-        Me.Title = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.UpperContainer1.SuspendLayout()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
@@ -70,6 +70,29 @@ Partial Class TitlePage
         Me.UpperContainer1.Name = "UpperContainer1"
         Me.UpperContainer1.Size = New System.Drawing.Size(842, 83)
         Me.UpperContainer1.TabIndex = 0
+        '
+        'Title
+        '
+        Me.Title.AutoSize = True
+        Me.Title.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Title.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Title.Location = New System.Drawing.Point(3, 0)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(0, 73)
+        Me.Title.TabIndex = 0
+        Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(822, 76)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Budgeting Simulator 2018"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LowerContainer1
         '
@@ -369,29 +392,6 @@ Partial Class TitlePage
         Me.Save.TabIndex = 0
         Me.Save.Text = "Save to file"
         Me.Save.UseVisualStyleBackColor = True
-        '
-        'Title
-        '
-        Me.Title.AutoSize = True
-        Me.Title.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Title.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Title.Location = New System.Drawing.Point(3, 0)
-        Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(0, 73)
-        Me.Title.TabIndex = 0
-        Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(822, 76)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Budgeting Simulator 2018"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TitlePage
         '

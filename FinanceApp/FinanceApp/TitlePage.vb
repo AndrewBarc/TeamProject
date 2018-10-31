@@ -2,7 +2,6 @@
 Public Class TitlePage
 
     Dim Money As Transaction = New Transaction()
-    Dim count As Integer = 1
 
     Private Sub TitlePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
@@ -23,8 +22,6 @@ Public Class TitlePage
     Private Sub ButtonAddTransaction_Click(sender As Object, e As EventArgs) Handles ButtonAddTransaction.Click
         AddRowToGridView()
 
-        TCollection.Add(Money)
-        count = count + 1
         TextBoxTransactionDescription.Clear()
         MaskedTextBoxTransactionDate.Clear()
         TextBoxTransactionAmount.Clear()
@@ -55,18 +52,11 @@ Public Class TitlePage
         UpdateTDate()
     End Sub
 
-#Region "Array"
-    Dim TCollection As New List(Of Transaction)
-#End Region
-
 #Region "Data Table"
 
     Dim dt As New DataTable
 
     Sub AddColumnsToGridView()
-
-        dt.Columns.Add("ID")
-        dt.Columns(0).AutoIncrement = True
 
         dt.Columns.Add("Date")
         dt.Columns.Add("Description")
