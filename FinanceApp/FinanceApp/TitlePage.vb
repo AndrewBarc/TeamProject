@@ -146,10 +146,10 @@ Public Class TitlePage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Save.Click
-        Dim writefile As String = "C:\Users\Public\Documents/data.txt"
-
-        If System.IO.File.Exists("C:\Users\Public\Documents/data.txt") = True Then
-            Dim newWriter As New System.IO.StreamWriter(writefile, True)
+        Dim filePath As String
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        If System.IO.File.Exists(filePath) = True Then
+            Dim newWriter As New System.IO.StreamWriter(filePath, True)
             For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
                 For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
                     newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
@@ -161,7 +161,7 @@ Public Class TitlePage
             newWriter.Close()
             MessageBox.Show("Data Saved")
         Else
-            Dim write As TextWriter = New StreamWriter("C:\Users\Public\Documents/data.txt")
+            Dim write As TextWriter = New StreamWriter(filePath)
             For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
                 For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
                     write.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
@@ -178,6 +178,37 @@ Public Class TitlePage
     Private Sub UpperContainer1_Paint(sender As Object, e As PaintEventArgs) Handles UpperContainer1.Paint
 
     End Sub
+
+    Private Sub TitlePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim filePath As String
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        If System.IO.File.Exists(filePath) = True Then
+            Dim newWriter As New System.IO.StreamWriter(filePath, True)
+            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
+                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
+                    newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
+                Next
+
+                newWriter.Write(vbCrLf)
+
+            Next
+            newWriter.Close()
+            MessageBox.Show("Data Saved")
+        Else
+            Dim write As TextWriter = New StreamWriter(filePath)
+            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
+                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
+                    write.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
+                Next
+
+                write.Write(vbCrLf)
+
+            Next
+            write.Close()
+            MessageBox.Show("Data Saved")
+        End If
+    End Sub
+
 
 #End Region
 
