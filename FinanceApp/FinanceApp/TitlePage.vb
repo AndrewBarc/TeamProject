@@ -24,6 +24,10 @@
 
         TCollection.Add(Money)
         count = count + 1
+        TextBoxTransactionDescription.Clear()
+        MaskedTextBoxTransactionDate.Clear()
+        TextBoxTransactionAmount.Clear()
+
     End Sub
 
     Private Sub TextBoxTransactionDescription_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTransactionDescription.TextChanged

@@ -249,7 +249,7 @@ Partial Class TitlePage
         '
         Me.ComboBoxCategories.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ComboBoxCategories.FormattingEnabled = True
-        Me.ComboBoxCategories.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Office", "Personal Care", "Pets", "Shopping", "Travel"})
+        Me.ComboBoxCategories.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Office", "Personal Care", "Pets", "Shopping", "Travel", "Job Income"})
         Me.ComboBoxCategories.Location = New System.Drawing.Point(3, 96)
         Me.ComboBoxCategories.Name = "ComboBoxCategories"
         Me.ComboBoxCategories.Size = New System.Drawing.Size(243, 21)
