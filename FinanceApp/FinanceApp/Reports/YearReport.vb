@@ -1,22 +1,15 @@
 ﻿Public Class YearReport
-    Private Sub BuildReport_Click(sender As Object, e As EventArgs) Handles BuildReport.Click
-        Using MyReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("C:\TestFolder\test.txt")
-            MyReader.TextFieldType = FileIO.FieldType.Delimited
-            MyReader.SetDelimiters(",")
-            Dim currentRow As String()
-            While Not MyReader.EndOfData
-                Try
-                    currentRow = MyReader.ReadFields()
-                    Dim currentField As String
-                    For Each currentField In currentRow
-                        Report.Items.Add(currentField)
-                        MsgBox(currentField)
-                    Next
-                Catch ex As Microsoft.VisualBasic.FileIO.MalformedLineException
-                    MsgBox("Line" & ex.Message & "is not valid and will be skipped.")
-                End Try
-            End While
-        End Using
-
+    Dim year As String
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
     End Sub
+
+    Private Sub YearComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles YearComboBox.SelectedIndexChanged
+        year = YearComboBox.Text
+        MsgBox(year)
+    End Sub
+
+    Function get_year()
+        Return year
+    End Function
 End Class
