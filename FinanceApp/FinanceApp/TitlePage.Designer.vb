@@ -46,9 +46,13 @@ Partial Class TitlePage
         Me.ButtonReports = New System.Windows.Forms.Button()
         Me.ButtonCalendar = New System.Windows.Forms.Button()
         Me.ButtonBudgeting = New System.Windows.Forms.Button()
-        Me.DataTransactionList = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.SaveButton = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DataTransactionList = New System.Windows.Forms.DataGridView()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBoxTotal = New System.Windows.Forms.TextBox()
         Me.UpperContainer1.SuspendLayout()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
@@ -56,8 +60,10 @@ Partial Class TitlePage
         Me.Panel1.SuspendLayout()
         Me.BoxMenu.SuspendLayout()
         Me.LayoutPanelMenu.SuspendLayout()
-        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'UpperContainer1
@@ -106,7 +112,7 @@ Partial Class TitlePage
         Me.LowerContainer1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.LowerContainer1.Controls.Add(Me.BoxAddTransaction, 0, 0)
         Me.LowerContainer1.Controls.Add(Me.BoxMenu, 2, 0)
-        Me.LowerContainer1.Controls.Add(Me.DataTransactionList, 1, 0)
+        Me.LowerContainer1.Controls.Add(Me.TableLayoutPanel3, 1, 0)
         Me.LowerContainer1.Location = New System.Drawing.Point(12, 118)
         Me.LowerContainer1.Name = "LowerContainer1"
         Me.LowerContainer1.RowCount = 1
@@ -361,15 +367,6 @@ Partial Class TitlePage
         Me.ButtonBudgeting.Text = "Budgeting"
         Me.ButtonBudgeting.UseVisualStyleBackColor = True
         '
-        'DataTransactionList
-        '
-        Me.DataTransactionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataTransactionList.Location = New System.Drawing.Point(255, 3)
-        Me.DataTransactionList.Name = "DataTransactionList"
-        Me.DataTransactionList.Size = New System.Drawing.Size(330, 321)
-        Me.DataTransactionList.TabIndex = 2
-        '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 1
@@ -392,6 +389,67 @@ Partial Class TitlePage
         Me.SaveButton.TabIndex = 0
         Me.SaveButton.Text = "Save to file"
         Me.SaveButton.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.DataTransactionList, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 0, 1)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(255, 3)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 2
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(330, 321)
+        Me.TableLayoutPanel3.TabIndex = 2
+        '
+        'DataTransactionList
+        '
+        Me.DataTransactionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataTransactionList.Location = New System.Drawing.Point(3, 3)
+        Me.DataTransactionList.Name = "DataTransactionList"
+        Me.DataTransactionList.Size = New System.Drawing.Size(324, 250)
+        Me.DataTransactionList.TabIndex = 4
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 2
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.TextBoxTotal, 0, 1)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 259)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 2
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(324, 59)
+        Me.TableLayoutPanel4.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label2.Location = New System.Drawing.Point(3, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(156, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Total"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'TextBoxTotal
+        '
+        Me.TextBoxTotal.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBoxTotal.Location = New System.Drawing.Point(3, 32)
+        Me.TextBoxTotal.Name = "TextBoxTotal"
+        Me.TextBoxTotal.ReadOnly = True
+        Me.TextBoxTotal.Size = New System.Drawing.Size(156, 20)
+        Me.TextBoxTotal.TabIndex = 1
+        Me.TextBoxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TitlePage
         '
@@ -416,8 +474,11 @@ Partial Class TitlePage
         Me.Panel1.PerformLayout()
         Me.BoxMenu.ResumeLayout(False)
         Me.LayoutPanelMenu.ResumeLayout(False)
-        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -436,12 +497,10 @@ Partial Class TitlePage
     Friend WithEvents LabelTransactionDescription As Label
     Friend WithEvents LabelTransactionDate As Label
     Friend WithEvents ButtonAddTransaction As Button
-    Friend WithEvents DataTransactionList As DataGridView
     Friend WithEvents LabelCategory As Label
     Friend WithEvents ComboBoxCategories As ComboBox
     Friend WithEvents TextBoxTransactionAmount As TextBox
     Friend WithEvents LabelTransactionAmount As Label
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents RadioButtonExpense As RadioButton
     Friend WithEvents RadioButtonIncome As RadioButton
     Friend WithEvents MaskedTextBoxTransactionDate As MaskedTextBox
@@ -449,4 +508,10 @@ Partial Class TitlePage
     Friend WithEvents SaveButton As Button
     Friend WithEvents Title As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents DataTransactionList As DataGridView
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBoxTotal As TextBox
 End Class
