@@ -25,6 +25,7 @@ Public Class TitlePage
         TextBoxTransactionDescription.Clear()
         MaskedTextBoxTransactionDate.Clear()
         TextBoxTransactionAmount.Clear()
+        ComboBoxCategories.ResetText()
 
     End Sub
 
@@ -104,18 +105,23 @@ Public Class TitlePage
             End If
             Money.TAmount = CDbl(TextBoxTransactionAmount.Text) * sign
         End If
+
+        UpdateButton()
     End Sub
 
     Sub UpdateTDate()
         Money.TDate = MaskedTextBoxTransactionDate.Text
+        UpdateButton()
     End Sub
 
     Sub UpdateTDescription()
         Money.TDescription = TextBoxTransactionDescription.Text
+        UpdateButton()
     End Sub
 
     Sub UpdateTCategory()
         Money.TCategory = ComboBoxCategories.Text
+        UpdateButton()
     End Sub
 
 #End Region
@@ -149,6 +155,15 @@ Public Class TitlePage
             Next
             write.Close()
             MessageBox.Show("Data Saved")
+        End If
+    End Sub
+
+    Sub UpdateButton()
+        If TextBoxTransactionAmount.Text = "" Or TextBoxTransactionDescription.Text = "" _
+            Or ComboBoxCategories.Text = "" Or MaskedTextBoxTransactionDate.Text = "  /  /    " Then
+            ButtonAddTransaction.Enabled = False
+        Else
+            ButtonAddTransaction.Enabled = True
         End If
     End Sub
 
