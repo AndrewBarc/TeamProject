@@ -52,6 +52,14 @@ Public Class TitlePage
         UpdateTDate()
     End Sub
 
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+        SavetoFile()
+    End Sub
+
+    Private Sub TitlePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SavetoFile()
+    End Sub
+
 #Region "Data Table"
 
     Dim dt As New DataTable
@@ -110,12 +118,11 @@ Public Class TitlePage
         Money.TCategory = ComboBoxCategories.Text
     End Sub
 
+#End Region
 
-    Private Sub DataTransactionList_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataTransactionList.CellContentClick
+#Region "Functions"
 
-    End Sub
-
-    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+    Sub SavetoFile()
         Dim filePath As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
         If System.IO.File.Exists(filePath) = True Then
@@ -144,42 +151,8 @@ Public Class TitlePage
             MessageBox.Show("Data Saved")
         End If
     End Sub
-
-    Private Sub UpperContainer1_Paint(sender As Object, e As PaintEventArgs) Handles UpperContainer1.Paint
-
-    End Sub
-
-    Private Sub TitlePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim filePath As String
-        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
-        If System.IO.File.Exists(filePath) = True Then
-            Dim newWriter As New System.IO.StreamWriter(filePath, True)
-            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
-                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
-                    newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
-                Next
-
-                newWriter.Write(vbCrLf)
-
-            Next
-            newWriter.Close()
-            MessageBox.Show("Data Saved")
-        Else
-            Dim write As TextWriter = New StreamWriter(filePath)
-            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
-                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
-                    write.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
-                Next
-
-                write.Write(vbCrLf)
-
-            Next
-            write.Close()
-            MessageBox.Show("Data Saved")
-        End If
-    End Sub
-
 
 #End Region
+
 
 End Class
