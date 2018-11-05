@@ -67,7 +67,7 @@ Partial Class TitlePage
         Me.UpperContainer1.Controls.Add(Me.Label1)
         Me.UpperContainer1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.UpperContainer1.Location = New System.Drawing.Point(16, 15)
-        Me.UpperContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UpperContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.UpperContainer1.Name = "UpperContainer1"
         Me.UpperContainer1.Size = New System.Drawing.Size(1123, 102)
         Me.UpperContainer1.TabIndex = 0
@@ -111,7 +111,7 @@ Partial Class TitlePage
         Me.LowerContainer1.Controls.Add(Me.BoxMenu, 2, 0)
         Me.LowerContainer1.Controls.Add(Me.DataTransactionList, 1, 0)
         Me.LowerContainer1.Location = New System.Drawing.Point(16, 145)
-        Me.LowerContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LowerContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.LowerContainer1.Name = "LowerContainer1"
         Me.LowerContainer1.RowCount = 1
         Me.LowerContainer1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -124,9 +124,9 @@ Partial Class TitlePage
         Me.BoxAddTransaction.Controls.Add(Me.TableLayoutPanel1)
         Me.BoxAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BoxAddTransaction.Location = New System.Drawing.Point(4, 4)
-        Me.BoxAddTransaction.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BoxAddTransaction.Margin = New System.Windows.Forms.Padding(4)
         Me.BoxAddTransaction.Name = "BoxAddTransaction"
-        Me.BoxAddTransaction.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BoxAddTransaction.Padding = New System.Windows.Forms.Padding(4)
         Me.BoxAddTransaction.Size = New System.Drawing.Size(328, 394)
         Me.BoxAddTransaction.TabIndex = 0
         Me.BoxAddTransaction.TabStop = False
@@ -148,7 +148,7 @@ Partial Class TitlePage
         Me.TableLayoutPanel1.Controls.Add(Me.ComboBoxCategories, 0, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 19)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 10
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
@@ -183,7 +183,7 @@ Partial Class TitlePage
         Me.Panel1.Controls.Add(Me.RadioButtonIncome)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(4, 152)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(312, 29)
         Me.Panel1.TabIndex = 12
@@ -193,7 +193,7 @@ Partial Class TitlePage
         Me.RadioButtonExpense.AutoSize = True
         Me.RadioButtonExpense.Dock = System.Windows.Forms.DockStyle.Right
         Me.RadioButtonExpense.Location = New System.Drawing.Point(189, 0)
-        Me.RadioButtonExpense.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RadioButtonExpense.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButtonExpense.Name = "RadioButtonExpense"
         Me.RadioButtonExpense.Padding = New System.Windows.Forms.Padding(0, 0, 40, 0)
         Me.RadioButtonExpense.Size = New System.Drawing.Size(123, 29)
@@ -207,7 +207,7 @@ Partial Class TitlePage
         Me.RadioButtonIncome.AutoSize = True
         Me.RadioButtonIncome.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadioButtonIncome.Location = New System.Drawing.Point(0, 0)
-        Me.RadioButtonIncome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RadioButtonIncome.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButtonIncome.Name = "RadioButtonIncome"
         Me.RadioButtonIncome.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.RadioButtonIncome.Size = New System.Drawing.Size(114, 29)
@@ -232,7 +232,7 @@ Partial Class TitlePage
         '
         Me.TextBoxTransactionAmount.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBoxTransactionAmount.Location = New System.Drawing.Point(4, 226)
-        Me.TextBoxTransactionAmount.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxTransactionAmount.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxTransactionAmount.Name = "TextBoxTransactionAmount"
         Me.TextBoxTransactionAmount.Size = New System.Drawing.Size(312, 22)
         Me.TextBoxTransactionAmount.TabIndex = 2
@@ -241,7 +241,7 @@ Partial Class TitlePage
         '
         Me.TextBoxTransactionDescription.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBoxTransactionDescription.Location = New System.Drawing.Point(4, 41)
-        Me.TextBoxTransactionDescription.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxTransactionDescription.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxTransactionDescription.MaxLength = 40
         Me.TextBoxTransactionDescription.Name = "TextBoxTransactionDescription"
         Me.TextBoxTransactionDescription.Size = New System.Drawing.Size(312, 22)
@@ -263,7 +263,7 @@ Partial Class TitlePage
         '
         Me.ButtonAddTransaction.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ButtonAddTransaction.Location = New System.Drawing.Point(4, 337)
-        Me.ButtonAddTransaction.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonAddTransaction.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonAddTransaction.Name = "ButtonAddTransaction"
         Me.ButtonAddTransaction.Size = New System.Drawing.Size(312, 30)
         Me.ButtonAddTransaction.TabIndex = 6
@@ -274,7 +274,7 @@ Partial Class TitlePage
         '
         Me.MaskedTextBoxTransactionDate.Dock = System.Windows.Forms.DockStyle.Top
         Me.MaskedTextBoxTransactionDate.Location = New System.Drawing.Point(4, 300)
-        Me.MaskedTextBoxTransactionDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaskedTextBoxTransactionDate.Margin = New System.Windows.Forms.Padding(4)
         Me.MaskedTextBoxTransactionDate.Mask = "00/00/0000"
         Me.MaskedTextBoxTransactionDate.Name = "MaskedTextBoxTransactionDate"
         Me.MaskedTextBoxTransactionDate.Size = New System.Drawing.Size(312, 22)
@@ -300,7 +300,7 @@ Partial Class TitlePage
         Me.ComboBoxCategories.FormattingEnabled = True
         Me.ComboBoxCategories.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Office", "Personal Care", "Pets", "Shopping", "Travel", "Job Income"})
         Me.ComboBoxCategories.Location = New System.Drawing.Point(4, 115)
-        Me.ComboBoxCategories.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBoxCategories.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBoxCategories.Name = "ComboBoxCategories"
         Me.ComboBoxCategories.Size = New System.Drawing.Size(312, 24)
         Me.ComboBoxCategories.TabIndex = 1
@@ -311,9 +311,9 @@ Partial Class TitlePage
         Me.BoxMenu.Controls.Add(Me.LayoutPanelMenu)
         Me.BoxMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BoxMenu.Location = New System.Drawing.Point(789, 4)
-        Me.BoxMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BoxMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.BoxMenu.Name = "BoxMenu"
-        Me.BoxMenu.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BoxMenu.Padding = New System.Windows.Forms.Padding(4)
         Me.BoxMenu.Size = New System.Drawing.Size(330, 394)
         Me.BoxMenu.TabIndex = 1
         Me.BoxMenu.TabStop = False
@@ -329,7 +329,7 @@ Partial Class TitlePage
         Me.LayoutPanelMenu.Controls.Add(Me.ButtonBudgeting, 0, 0)
         Me.LayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutPanelMenu.Location = New System.Drawing.Point(4, 19)
-        Me.LayoutPanelMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LayoutPanelMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.LayoutPanelMenu.Name = "LayoutPanelMenu"
         Me.LayoutPanelMenu.RowCount = 4
         Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
@@ -388,7 +388,7 @@ Partial Class TitlePage
         Me.DataTransactionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataTransactionList.Location = New System.Drawing.Point(340, 4)
-        Me.DataTransactionList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataTransactionList.Margin = New System.Windows.Forms.Padding(4)
         Me.DataTransactionList.Name = "DataTransactionList"
         Me.DataTransactionList.Size = New System.Drawing.Size(441, 394)
         Me.DataTransactionList.TabIndex = 2
@@ -400,7 +400,7 @@ Partial Class TitlePage
         Me.TableLayoutPanel2.Controls.Add(Me.Save, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 564)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -411,7 +411,7 @@ Partial Class TitlePage
         '
         Me.Save.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Save.Location = New System.Drawing.Point(4, 4)
-        Me.Save.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Save.Margin = New System.Windows.Forms.Padding(4)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(1147, 25)
         Me.Save.TabIndex = 0
@@ -427,7 +427,7 @@ Partial Class TitlePage
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.LowerContainer1)
         Me.Controls.Add(Me.UpperContainer1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(905, 462)
         Me.Name = "TitlePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
