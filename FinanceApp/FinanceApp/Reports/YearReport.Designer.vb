@@ -23,84 +23,71 @@ Partial Class YearReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Year = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BuildReport = New System.Windows.Forms.Button()
-        Me.Report = New System.Windows.Forms.ListBox()
+        Me.YearComboBox = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.Controls.Add(Me.Year, 0, 1)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.BuildReport, 0, 2)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 1)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.YearComboBox, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 2)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(444, 108)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44037!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55963!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(196, 96)
         Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Year
-        '
-        Me.Year.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Year.FormattingEnabled = True
-        Me.Year.Items.AddRange(New Object() {"2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"})
-        Me.Year.Location = New System.Drawing.Point(142, 21)
-        Me.Year.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Year.Name = "Year"
-        Me.Year.Size = New System.Drawing.Size(160, 24)
-        Me.Year.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(158, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Please Select Year"
-        '
-        'BuildReport
-        '
-        Me.BuildReport.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BuildReport.Location = New System.Drawing.Point(4, 53)
-        Me.BuildReport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BuildReport.Name = "BuildReport"
-        Me.BuildReport.Size = New System.Drawing.Size(436, 52)
-        Me.BuildReport.TabIndex = 2
-        Me.BuildReport.Text = "Build Report"
-        Me.BuildReport.UseVisualStyleBackColor = True
-        '
-        'Report
-        '
-        Me.Report.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Report.FormattingEnabled = True
-        Me.Report.ItemHeight = 16
-        Me.Report.Location = New System.Drawing.Point(1, 112)
-        Me.Report.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Report.Name = "Report"
-        Me.Report.Size = New System.Drawing.Size(443, 452)
-        Me.Report.TabIndex = 1
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(190, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Please Select Year"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'YearComboBox
+        '
+        Me.YearComboBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.YearComboBox.FormattingEnabled = True
+        Me.YearComboBox.Items.AddRange(New Object() {"2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015"})
+        Me.YearComboBox.Location = New System.Drawing.Point(3, 18)
+        Me.YearComboBox.Name = "YearComboBox"
+        Me.YearComboBox.Size = New System.Drawing.Size(190, 21)
+        Me.YearComboBox.TabIndex = 1
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Location = New System.Drawing.Point(3, 56)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(190, 37)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Go"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'YearReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(444, 561)
-        Me.Controls.Add(Me.Report)
+        Me.ClientSize = New System.Drawing.Size(196, 96)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "YearReport"
         Me.Text = "YearReport"
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -110,8 +97,7 @@ Partial Class YearReport
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Year As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents BuildReport As Button
-    Friend WithEvents Report As ListBox
+    Friend WithEvents YearComboBox As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
