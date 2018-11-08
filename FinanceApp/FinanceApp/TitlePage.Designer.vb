@@ -46,13 +46,13 @@ Partial Class TitlePage
         Me.ButtonReports = New System.Windows.Forms.Button()
         Me.ButtonCalendar = New System.Windows.Forms.Button()
         Me.ButtonBudgeting = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.SaveButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataTransactionList = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxTotal = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.SaveButton = New System.Windows.Forms.Button()
         Me.UpperContainer1.SuspendLayout()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
@@ -60,10 +60,10 @@ Partial Class TitlePage
         Me.Panel1.SuspendLayout()
         Me.BoxMenu.SuspendLayout()
         Me.LayoutPanelMenu.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'UpperContainer1
@@ -367,29 +367,6 @@ Partial Class TitlePage
         Me.ButtonBudgeting.Text = "Budgeting"
         Me.ButtonBudgeting.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.SaveButton, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 458)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(866, 27)
-        Me.TableLayoutPanel2.TabIndex = 3
-        '
-        'SaveButton
-        '
-        Me.SaveButton.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.SaveButton.Location = New System.Drawing.Point(3, 4)
-        Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(860, 20)
-        Me.SaveButton.TabIndex = 0
-        Me.SaveButton.Text = "Save to file"
-        Me.SaveButton.UseVisualStyleBackColor = True
-        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 1
@@ -451,6 +428,29 @@ Partial Class TitlePage
         Me.TextBoxTotal.TabIndex = 1
         Me.TextBoxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.SaveButton, 0, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 458)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(866, 27)
+        Me.TableLayoutPanel2.TabIndex = 3
+        '
+        'SaveButton
+        '
+        Me.SaveButton.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.SaveButton.Location = New System.Drawing.Point(3, 4)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(860, 20)
+        Me.SaveButton.TabIndex = 0
+        Me.SaveButton.Text = "Save to file"
+        Me.SaveButton.UseVisualStyleBackColor = True
+        '
         'TitlePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -474,11 +474,11 @@ Partial Class TitlePage
         Me.Panel1.PerformLayout()
         Me.BoxMenu.ResumeLayout(False)
         Me.LayoutPanelMenu.ResumeLayout(False)
-        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         CType(Me.DataTransactionList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

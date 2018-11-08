@@ -29,8 +29,8 @@ Partial Class Calendar
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class Calendar
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.35404!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.64596!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(262, 486)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(243, 486)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -68,13 +68,13 @@ Partial Class Calendar
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.52381!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.47619!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(255, 301)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(237, 301)
         Me.TableLayoutPanel2.TabIndex = 2
         '
         'MonthCalendar1
         '
         Me.MonthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MonthCalendar1.Location = New System.Drawing.Point(14, 53)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 53)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
@@ -82,7 +82,7 @@ Partial Class Calendar
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 278)
+        Me.Label1.Location = New System.Drawing.Point(3, 278)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(230, 13)
         Me.Label1.TabIndex = 1
@@ -92,37 +92,37 @@ Partial Class Calendar
         '
         Me.TableLayoutPanel3.ColumnCount = 1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.DateTimePicker1, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Button1, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.MaskedTextBox1, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 310)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.4386!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.5614!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(255, 173)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(237, 173)
         Me.TableLayoutPanel3.TabIndex = 3
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DateTimePicker1.CustomFormat = ""
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(83, 12)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(88, 20)
-        Me.DateTimePicker1.TabIndex = 0
-        Me.DateTimePicker1.Value = New Date(2018, 10, 31, 0, 0, 0, 0)
         '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Location = New System.Drawing.Point(71, 81)
+        Me.Button1.Location = New System.Drawing.Point(62, 81)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 54)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.MaskedTextBox1.Mask = "00/00/0000"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(231, 20)
+        Me.MaskedTextBox1.TabIndex = 2
+        Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TableLayoutPanel4
         '
@@ -131,12 +131,12 @@ Partial Class Calendar
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.DataGridView1, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(262, 0)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(243, 0)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(287, 486)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(306, 486)
         Me.TableLayoutPanel4.TabIndex = 1
         '
         'DataGridView1
@@ -145,7 +145,7 @@ Partial Class Calendar
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(281, 480)
+        Me.DataGridView1.Size = New System.Drawing.Size(300, 480)
         Me.DataGridView1.TabIndex = 0
         '
         'Calendar
@@ -163,6 +163,7 @@ Partial Class Calendar
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -174,21 +175,90 @@ Partial Class Calendar
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button1 As Button
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim ReadFile As String = "C:\Users\Public\Documents/data.txt"
-        'Dim read As TextReader = New StreamReader(ReadFile)
-        ' Dim line As String
-        ' Dim count As Integer = 0
+    Private Sub Calendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AddColumnsToGridView()
+    End Sub
 
+#Region "Data Table"
+
+    Dim dt As New DataTable
+    Dim in_Date As String
+    Dim in_Description As String
+    Dim in_Category As String
+    Dim in_Amount As String
+
+    Sub AddColumnsToGridView()
+
+        dt.Columns.Add("Date")
+        dt.Columns.Add("Description")
+        dt.Columns.Add("Category")
+        dt.Columns.Add("Amount")
+
+    End Sub
+
+    Sub AddRowToGridView()
+
+        Dim R As DataRow = dt.NewRow
+
+        R("Date") = in_Date
+        R("Description") = in_Description
+        R("Category") = in_Category
+        R("Amount") = in_Amount
+
+        dt.Rows.Add(R)
+
+        DataGridView1.DataSource = dt
+
+    End Sub
+
+#End Region
+
+    Public Function GetNthIndex(s As String, t As Char, n As Integer) As Integer
+        Dim count As Integer = 0
+        For i As Integer = 0 To s.Length - 1
+            If s(i) = t Then
+                count += 1
+                If count = n Then
+                    Return i
+                End If
+            End If
+        Next
+        Return -1
+    End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim filePath As String
+        Dim line As String
+
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        Dim in_stream As New System.IO.StreamReader(filePath)
+
+        Do While in_stream.Peek() <> -1
+            line = line & in_stream.ReadLine() & vbNewLine
+            in_Date = line.Substring(0, 10)
+            If in_Date = MaskedTextBox1.Text Then
+                in_Description = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
+                in_Category = line.Substring(GetNthIndex(line, ",", 2) + 1, GetNthIndex(line, ",", 3) - (GetNthIndex(line, ",", 2)) - 1)
+                in_Amount = line.Substring(GetNthIndex(line, ",", 3) + 1, GetNthIndex(line, ",", 4) - (GetNthIndex(line, ",", 3)) - 1)
+                AddRowToGridView()
+            End If
+        Loop
+        in_stream.Close()
     End Sub
 
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub MaskedTextBox1_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox1.MaskInputRejected
 
     End Sub
 End Class

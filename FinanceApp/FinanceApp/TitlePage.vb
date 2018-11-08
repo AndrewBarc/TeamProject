@@ -167,6 +167,10 @@ Public Class TitlePage
         End If
     End Sub
 
+    Private Sub MaskedTextBoxTransactionDate_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBoxTransactionDate.MaskInputRejected
+
+    End Sub
+
 #End Region
 
 
