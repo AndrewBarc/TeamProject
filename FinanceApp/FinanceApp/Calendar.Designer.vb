@@ -29,13 +29,18 @@ Partial Class Calendar
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.SearchButton = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,8 +97,8 @@ Partial Class Calendar
         '
         Me.TableLayoutPanel3.ColumnCount = 1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.Button1, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.MaskedTextBox1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 0, 1)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 310)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -104,16 +109,6 @@ Partial Class Calendar
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(237, 173)
         Me.TableLayoutPanel3.TabIndex = 3
         '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Location = New System.Drawing.Point(62, 81)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 54)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'MaskedTextBox1
         '
         Me.MaskedTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -123,6 +118,67 @@ Partial Class Calendar
         Me.MaskedTextBox1.Size = New System.Drawing.Size(231, 20)
         Me.MaskedTextBox1.TabIndex = 2
         Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 1
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.SearchButton, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.ComboBox1, 0, 2)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.Button1, 0, 3)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 47)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 4
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(231, 123)
+        Me.TableLayoutPanel5.TabIndex = 3
+        '
+        'SearchButton
+        '
+        Me.SearchButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SearchButton.Location = New System.Drawing.Point(3, 3)
+        Me.SearchButton.Name = "SearchButton"
+        Me.SearchButton.Size = New System.Drawing.Size(225, 23)
+        Me.SearchButton.TabIndex = 0
+        Me.SearchButton.Text = "Search By Date"
+        Me.SearchButton.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Job Income", "Office", "Personal Care", "Pets", "Shopping", "Travel"})
+        Me.ComboBox1.Location = New System.Drawing.Point(3, 61)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(225, 21)
+        Me.ComboBox1.Sorted = True
+        Me.ComboBox1.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(225, 29)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Select a Category to Search all Transactions by"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Location = New System.Drawing.Point(3, 92)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(225, 28)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Search By Category"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel4
         '
@@ -164,6 +220,8 @@ Partial Class Calendar
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.TableLayoutPanel5.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -175,7 +233,6 @@ Partial Class Calendar
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
 
     Private Sub Calendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
@@ -228,7 +285,24 @@ Partial Class Calendar
         Return -1
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents DataGridView1 As DataGridView
+
+
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub MaskedTextBox1_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox1.MaskInputRejected
+
+    End Sub
+
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents SearchButton As Button
+
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
         Dim filePath As String
         Dim line As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -246,17 +320,25 @@ Partial Class Calendar
         in_stream.Close()
     End Sub
 
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
 
-
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub MaskedTextBox1_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox1.MaskInputRejected
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim filePath As String
+        Dim line As String
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        Dim in_stream As New System.IO.StreamReader(filePath)
+        Do While in_stream.Peek() <> -1
+            line = in_stream.ReadLine() & vbNewLine
+            in_Category = line.Substring(GetNthIndex(line, ",", 2) + 1, GetNthIndex(line, ",", 3) - (GetNthIndex(line, ",", 2)) - 1)
+            If in_Category = ComboBox1.Text Then
+                in_Date = line.Substring(0, 10)
+                in_Description = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
+                in_Amount = line.Substring(GetNthIndex(line, ",", 3) + 1, GetNthIndex(line, ",", 4) - (GetNthIndex(line, ",", 3)) - 1)
+                AddRowToGridView()
+            End If
+        Loop
+        in_stream.Close()
     End Sub
 End Class

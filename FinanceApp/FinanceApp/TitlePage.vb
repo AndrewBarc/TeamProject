@@ -214,6 +214,10 @@ Public Class TitlePage
         Return -1
     End Function
 
+    Private Sub ComboBoxCategories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxCategories.SelectedIndexChanged
+
+    End Sub
+
 #End Region
 
 End Class
