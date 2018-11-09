@@ -90,6 +90,7 @@ Public Class TitlePage
     End Sub
 
     Private Sub TitlePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SavetoFile()
         MessageBox.Show("Data Saved")
     End Sub
 
