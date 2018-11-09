@@ -61,8 +61,6 @@ Public Class TitlePage
         TextBoxTransactionAmount.Clear()
         ComboBoxCategories.ResetText()
         DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
-
-
     End Sub
 
     Private Sub TextBoxTransactionDescription_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTransactionDescription.TextChanged
@@ -123,6 +121,9 @@ Public Class TitlePage
         dt.Rows.Add(R)
 
         DataTransactionList.DataSource = dt
+        UpdateTotal(Money.TAmount)
+        TextBoxTotal.Text = TotalAmount.ToString()
+
 
     End Sub
 
@@ -163,7 +164,13 @@ Public Class TitlePage
 
 #End Region
 
+    Dim TotalAmount As Double = 0
+
 #Region "Functions"
+
+    Sub UpdateTotal(i As Double)
+        TotalAmount = TotalAmount + i
+    End Sub
 
     Sub SavetoFile()
         Dim filePath As String
@@ -196,7 +203,18 @@ Public Class TitlePage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim DAmount As Double = DataTransactionList.CurrentRow.Cells(3).Value
+        If DAmount < 0 Then
+            TotalAmount = TotalAmount - DAmount
+        Else
+            UpdateTotal(DAmount)
+        End If
+        TextBoxTotal.Text = TotalAmount.ToString()
         DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
+    End Sub
+
+    Private Sub TextBoxTotal_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTotal.TextChanged
+
     End Sub
 
 #End Region
