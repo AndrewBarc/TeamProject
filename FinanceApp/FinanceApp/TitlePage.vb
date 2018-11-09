@@ -19,6 +19,8 @@ Public Class TitlePage
                 AddRowToGridView()
             Loop
             in_stream.Close()
+            DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+
         Else
             Dim input As FileStream = File.Create(filePath)
             MessageBox.Show("File 'data.'txt' created in Documents.")
@@ -58,6 +60,8 @@ Public Class TitlePage
         MaskedTextBoxTransactionDate.Clear()
         TextBoxTransactionAmount.Clear()
         ComboBoxCategories.ResetText()
+        DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+
 
     End Sub
 
@@ -189,6 +193,10 @@ Public Class TitlePage
 
     Private Sub MaskedTextBoxTransactionDate_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBoxTransactionDate.MaskInputRejected
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
     End Sub
 
 #End Region

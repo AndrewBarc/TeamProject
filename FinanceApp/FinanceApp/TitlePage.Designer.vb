@@ -53,6 +53,8 @@ Partial Class TitlePage
         Me.TextBoxTotal = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.SaveButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.UpperContainer1.SuspendLayout()
         Me.LowerContainer1.SuspendLayout()
         Me.BoxAddTransaction.SuspendLayout()
@@ -398,6 +400,8 @@ Partial Class TitlePage
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.TextBoxTotal, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Button1, 1, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label3, 1, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 259)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
@@ -450,6 +454,27 @@ Partial Class TitlePage
         Me.SaveButton.TabIndex = 0
         Me.SaveButton.Text = "Save to file"
         Me.SaveButton.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Location = New System.Drawing.Point(165, 32)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 24)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Remove"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label3.Location = New System.Drawing.Point(165, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(156, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Remove Selected Transaction"
         '
         'TitlePage
         '
@@ -514,4 +539,6 @@ Partial Class TitlePage
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxTotal As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
 End Class
