@@ -5,7 +5,39 @@ Public Class TitlePage
 
     Private Sub TitlePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
+        Dim filePath As String
+        Dim line As String
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        If System.IO.File.Exists(filePath) Then
+            Dim in_stream As New System.IO.StreamReader(filePath)
+            Do While in_stream.Peek() <> -1
+                line = in_stream.ReadLine() & vbNewLine
+                Money.TDate = line.Substring(0, 10)
+                Money.TDescription = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
+                Money.TCategory = line.Substring(GetNthIndex(line, ",", 2) + 1, GetNthIndex(line, ",", 3) - (GetNthIndex(line, ",", 2)) - 1)
+                Money.TAmount = line.Substring(GetNthIndex(line, ",", 3) + 1, GetNthIndex(line, ",", 4) - (GetNthIndex(line, ",", 3)) - 1)
+                AddRowToGridView()
+            Loop
+            in_stream.Close()
+        Else
+            Dim input As FileStream = File.Create(filePath)
+            MessageBox.Show("File 'data.'txt' created in Documents.")
+            input.Close()
+        End If
     End Sub
+
+    Public Function GetNthIndex(s As String, t As Char, n As Integer) As Integer
+        Dim count As Integer = 0
+        For i As Integer = 0 To s.Length - 1
+            If s(i) = t Then
+                count += 1
+                If count = n Then
+                    Return i
+                End If
+            End If
+        Next
+        Return -1
+    End Function
 
     Private Sub ButtonBudgeting_Click(sender As Object, e As EventArgs) Handles ButtonBudgeting.Click
         Budgeting.Show()
@@ -58,7 +90,7 @@ Public Class TitlePage
     End Sub
 
     Private Sub TitlePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        SavetoFile()
+        MessageBox.Show("Data Saved")
     End Sub
 
 #Region "Data Table"
@@ -131,31 +163,18 @@ Public Class TitlePage
     Sub SavetoFile()
         Dim filePath As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
-        If System.IO.File.Exists(filePath) = True Then
-            Dim newWriter As New System.IO.StreamWriter(filePath, True)
-            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
-                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
-                    newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
-                Next
+        My.Computer.FileSystem.DeleteFile(filePath)
 
-                newWriter.Write(vbCrLf)
-
+        Dim newWriter As New System.IO.StreamWriter(filePath, True)
+        For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
+            For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
+                newWriter.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
             Next
-            newWriter.Close()
-            MessageBox.Show("Data Saved")
-        Else
-            Dim write As TextWriter = New StreamWriter(filePath)
-            For i As Integer = 0 To DataTransactionList.Rows.Count - 2 Step +1
-                For j As Integer = 0 To DataTransactionList.Columns.Count - 1 Step +1
-                    write.Write(DataTransactionList.Rows(i).Cells(j).Value.ToString() & ",")
-                Next
 
-                write.Write(vbCrLf)
+            newWriter.Write(vbCrLf)
 
-            Next
-            write.Close()
-            MessageBox.Show("Data Saved")
-        End If
+        Next
+        newWriter.Close()
     End Sub
 
     Sub UpdateButton()

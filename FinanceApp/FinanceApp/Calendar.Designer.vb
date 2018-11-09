@@ -231,12 +231,10 @@ Partial Class Calendar
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim filePath As String
         Dim line As String
-
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
         Dim in_stream As New System.IO.StreamReader(filePath)
-
         Do While in_stream.Peek() <> -1
-            line = line & in_stream.ReadLine() & vbNewLine
+            line = in_stream.ReadLine() & vbNewLine
             in_Date = line.Substring(0, 10)
             If in_Date = MaskedTextBox1.Text Then
                 in_Description = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
