@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 Public Class TitlePage
 
+#Region "Form Events"
+
     Dim Money As Transaction = New Transaction()
 
     Private Sub TitlePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -96,9 +98,13 @@ Public Class TitlePage
         MessageBox.Show("Data Saved")
     End Sub
 
+#End Region
+
 #Region "Data Table"
 
     Dim dt As New DataTable
+
+    Dim TotalAmount As Double = 0
 
     Sub AddColumnsToGridView()
 
@@ -123,7 +129,6 @@ Public Class TitlePage
         DataTransactionList.DataSource = dt
         UpdateTotal(Money.TAmount)
         TextBoxTotal.Text = TotalAmount.ToString()
-
 
     End Sub
 
@@ -164,8 +169,6 @@ Public Class TitlePage
 
 #End Region
 
-    Dim TotalAmount As Double = 0
-
 #Region "Functions"
 
     Sub UpdateTotal(i As Double)
@@ -198,10 +201,6 @@ Public Class TitlePage
         End If
     End Sub
 
-    Private Sub MaskedTextBoxTransactionDate_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBoxTransactionDate.MaskInputRejected
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim DAmount As Double = DataTransactionList.CurrentRow.Cells(3).Value
         If DAmount < 0 Then
@@ -213,11 +212,6 @@ Public Class TitlePage
         DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
     End Sub
 
-    Private Sub TextBoxTotal_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTotal.TextChanged
-
-    End Sub
-
 #End Region
-
 
 End Class
