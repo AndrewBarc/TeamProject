@@ -30,19 +30,6 @@ Public Class TitlePage
         End If
     End Sub
 
-    Public Function GetNthIndex(s As String, t As Char, n As Integer) As Integer
-        Dim count As Integer = 0
-        For i As Integer = 0 To s.Length - 1
-            If s(i) = t Then
-                count += 1
-                If count = n Then
-                    Return i
-                End If
-            End If
-        Next
-        Return -1
-    End Function
-
     Private Sub ButtonBudgeting_Click(sender As Object, e As EventArgs) Handles ButtonBudgeting.Click
         Budgeting.Show()
     End Sub
@@ -62,7 +49,10 @@ Public Class TitlePage
         MaskedTextBoxTransactionDate.Clear()
         TextBoxTransactionAmount.Clear()
         ComboBoxCategories.ResetText()
+
         DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+
+        SavetoFile()
     End Sub
 
     Private Sub TextBoxTransactionDescription_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTransactionDescription.TextChanged
@@ -73,7 +63,7 @@ Public Class TitlePage
         UpdateTAmount()
     End Sub
 
-    Private Sub RadioButtonIncome_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonExpense.CheckedChanged
+    Private Sub RadioButtonIncome_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonIncome.CheckedChanged
         UpdateTAmount()
     End Sub
 
@@ -89,7 +79,16 @@ Public Class TitlePage
         UpdateTDate()
     End Sub
 
-    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+    Private Sub ButtonRemove_Click(sender As Object, e As EventArgs) Handles ButtonRemove.Click
+        Dim DAmount As Double = DataTransactionList.CurrentRow.Cells(3).Value
+        If DAmount < 0 Then
+            TotalAmount = TotalAmount - DAmount
+        Else
+            UpdateTotal(DAmount)
+        End If
+        TextBoxTotal.Text = TotalAmount.ToString()
+        DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
+
         SavetoFile()
     End Sub
 
@@ -201,16 +200,19 @@ Public Class TitlePage
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim DAmount As Double = DataTransactionList.CurrentRow.Cells(3).Value
-        If DAmount < 0 Then
-            TotalAmount = TotalAmount - DAmount
-        Else
-            UpdateTotal(DAmount)
-        End If
-        TextBoxTotal.Text = TotalAmount.ToString()
-        DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
-    End Sub
+
+    Public Function GetNthIndex(s As String, t As Char, n As Integer) As Integer
+        Dim count As Integer = 0
+        For i As Integer = 0 To s.Length - 1
+            If s(i) = t Then
+                count += 1
+                If count = n Then
+                    Return i
+                End If
+            End If
+        Next
+        Return -1
+    End Function
 
 #End Region
 
