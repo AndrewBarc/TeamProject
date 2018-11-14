@@ -25,9 +25,6 @@ Partial Class Calendar
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
@@ -35,12 +32,16 @@ Partial Class Calendar
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,8 +51,8 @@ Partial Class Calendar
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -60,38 +61,6 @@ Partial Class Calendar
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.64596!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(243, 486)
         Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.MonthCalendar1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.52381!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.47619!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(237, 301)
-        Me.TableLayoutPanel2.TabIndex = 2
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 53)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 278)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(230, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Enter a date to view transactions from that date"
         '
         'TableLayoutPanel3
         '
@@ -180,6 +149,51 @@ Partial Class Calendar
         Me.Button1.Text = "Search By Category"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.MonthCalendar1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 2)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 3
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.72758!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.27242!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(237, 301)
+        Me.TableLayoutPanel2.TabIndex = 4
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 9)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(3, 195)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(231, 43)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Total Amount of Sorted Transactions"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Location = New System.Drawing.Point(3, 241)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(231, 20)
+        Me.TextBox1.TabIndex = 2
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'TableLayoutPanel4
         '
         Me.TableLayoutPanel4.ColumnCount = 1
@@ -192,7 +206,7 @@ Partial Class Calendar
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(306, 486)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(441, 486)
         Me.TableLayoutPanel4.TabIndex = 1
         '
         'DataGridView1
@@ -201,7 +215,7 @@ Partial Class Calendar
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(300, 480)
+        Me.DataGridView1.Size = New System.Drawing.Size(435, 480)
         Me.DataGridView1.TabIndex = 0
         '
         'Calendar
@@ -209,19 +223,19 @@ Partial Class Calendar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(549, 486)
+        Me.ClientSize = New System.Drawing.Size(684, 486)
         Me.Controls.Add(Me.TableLayoutPanel4)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "Calendar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Finance - Calendar"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -229,13 +243,35 @@ Partial Class Calendar
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+
+    Dim TotalAmount As Double = 0
+
 
     Private Sub Calendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
+        Dim filePath As String
+        Dim line As String
+        filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
+        Dim in_stream As New System.IO.StreamReader(filePath)
+        Dim currentDate As String = DateTime.Now.ToString("MM/dd/yyyy")
+
+        Do While in_stream.Peek() <> -1
+            line = in_stream.ReadLine() & vbNewLine
+            in_Date = line.Substring(0, 10)
+            If in_Date = currentDate Then
+                in_Description = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
+                in_Category = line.Substring(GetNthIndex(line, ",", 2) + 1, GetNthIndex(line, ",", 3) - (GetNthIndex(line, ",", 2)) - 1)
+                in_Amount = line.Substring(GetNthIndex(line, ",", 3) + 1, GetNthIndex(line, ",", 4) - (GetNthIndex(line, ",", 3)) - 1)
+                AddRowToGridView()
+            End If
+        Loop
+        ' DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+        in_stream.Close()
+    End Sub
+
+    Sub UpdateTotal(i As Double)
+        TotalAmount = TotalAmount + i
     End Sub
 
 #Region "Data Table"
@@ -267,6 +303,8 @@ Partial Class Calendar
         dt.Rows.Add(R)
 
         DataGridView1.DataSource = dt
+        UpdateTotal(in_Amount)
+        TextBox1.Text = TotalAmount.ToString()
 
     End Sub
 
@@ -303,6 +341,7 @@ Partial Class Calendar
     Friend WithEvents SearchButton As Button
 
     Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
+        dt.Clear()
         Dim filePath As String
         Dim line As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -317,6 +356,7 @@ Partial Class Calendar
                 AddRowToGridView()
             End If
         Loop
+        DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
         in_stream.Close()
     End Sub
 
@@ -325,6 +365,7 @@ Partial Class Calendar
     Friend WithEvents Button1 As Button
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DataGridView1.Rows.Clear()
         Dim filePath As String
         Dim line As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -339,6 +380,12 @@ Partial Class Calendar
                 AddRowToGridView()
             End If
         Loop
+        DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
         in_stream.Close()
     End Sub
+
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

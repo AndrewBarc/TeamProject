@@ -24,8 +24,8 @@ Partial Class YearReport
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.YearComboBox = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -35,8 +35,8 @@ Partial Class YearReport
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.YearComboBox, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -57,20 +57,8 @@ Partial Class YearReport
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(190, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Please Select Year"
+        Me.Label1.Text = "Please Enter A Year"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'YearComboBox
-        '
-        Me.YearComboBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.YearComboBox.FormattingEnabled = True
-        Me.YearComboBox.Items.AddRange(New Object() {"2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015"})
-        Me.YearComboBox.Location = New System.Drawing.Point(3, 18)
-        Me.YearComboBox.Name = "YearComboBox"
-        Me.YearComboBox.Size = New System.Drawing.Size(190, 21)
-        Me.YearComboBox.TabIndex = 1
         '
         'Button1
         '
@@ -81,6 +69,14 @@ Partial Class YearReport
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Go"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Location = New System.Drawing.Point(3, 18)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(190, 20)
+        Me.TextBox1.TabIndex = 3
         '
         'YearReport
         '
@@ -98,6 +94,6 @@ Partial Class YearReport
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents YearComboBox As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class

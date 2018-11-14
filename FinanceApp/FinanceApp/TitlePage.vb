@@ -218,6 +218,10 @@ Public Class TitlePage
 
     End Sub
 
+    Private Sub TextBoxTotal_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTotal.TextChanged
+
+    End Sub
+
 #End Region
 
 End Class
