@@ -43,7 +43,6 @@ Partial Class TitlePage
         Me.ButtonHelp = New System.Windows.Forms.Button()
         Me.ButtonReports = New System.Windows.Forms.Button()
         Me.ButtonCalendar = New System.Windows.Forms.Button()
-        Me.ButtonBudgeting = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataTransactionList = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
@@ -288,28 +287,26 @@ Partial Class TitlePage
         '
         Me.LayoutPanelMenu.ColumnCount = 1
         Me.LayoutPanelMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.LayoutPanelMenu.Controls.Add(Me.ButtonHelp, 0, 3)
-        Me.LayoutPanelMenu.Controls.Add(Me.ButtonReports, 0, 2)
-        Me.LayoutPanelMenu.Controls.Add(Me.ButtonCalendar, 0, 1)
-        Me.LayoutPanelMenu.Controls.Add(Me.ButtonBudgeting, 0, 0)
+        Me.LayoutPanelMenu.Controls.Add(Me.ButtonHelp, 0, 2)
+        Me.LayoutPanelMenu.Controls.Add(Me.ButtonReports, 0, 1)
+        Me.LayoutPanelMenu.Controls.Add(Me.ButtonCalendar, 0, 0)
         Me.LayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutPanelMenu.Location = New System.Drawing.Point(3, 16)
         Me.LayoutPanelMenu.Name = "LayoutPanelMenu"
-        Me.LayoutPanelMenu.RowCount = 4
-        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.LayoutPanelMenu.RowCount = 3
+        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.LayoutPanelMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.LayoutPanelMenu.Size = New System.Drawing.Size(324, 481)
         Me.LayoutPanelMenu.TabIndex = 0
         '
         'ButtonHelp
         '
         Me.ButtonHelp.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonHelp.Location = New System.Drawing.Point(10, 370)
+        Me.ButtonHelp.Location = New System.Drawing.Point(10, 330)
         Me.ButtonHelp.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonHelp.Name = "ButtonHelp"
-        Me.ButtonHelp.Size = New System.Drawing.Size(304, 101)
+        Me.ButtonHelp.Size = New System.Drawing.Size(304, 141)
         Me.ButtonHelp.TabIndex = 3
         Me.ButtonHelp.Text = "Help"
         Me.ButtonHelp.UseVisualStyleBackColor = True
@@ -317,10 +314,10 @@ Partial Class TitlePage
         'ButtonReports
         '
         Me.ButtonReports.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonReports.Location = New System.Drawing.Point(10, 250)
+        Me.ButtonReports.Location = New System.Drawing.Point(10, 170)
         Me.ButtonReports.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonReports.Name = "ButtonReports"
-        Me.ButtonReports.Size = New System.Drawing.Size(304, 100)
+        Me.ButtonReports.Size = New System.Drawing.Size(304, 140)
         Me.ButtonReports.TabIndex = 2
         Me.ButtonReports.Text = "Financial Reports"
         Me.ButtonReports.UseVisualStyleBackColor = True
@@ -328,24 +325,13 @@ Partial Class TitlePage
         'ButtonCalendar
         '
         Me.ButtonCalendar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonCalendar.Location = New System.Drawing.Point(10, 130)
+        Me.ButtonCalendar.Location = New System.Drawing.Point(10, 10)
         Me.ButtonCalendar.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonCalendar.Name = "ButtonCalendar"
-        Me.ButtonCalendar.Size = New System.Drawing.Size(304, 100)
+        Me.ButtonCalendar.Size = New System.Drawing.Size(304, 140)
         Me.ButtonCalendar.TabIndex = 1
         Me.ButtonCalendar.Text = "Calendar"
         Me.ButtonCalendar.UseVisualStyleBackColor = True
-        '
-        'ButtonBudgeting
-        '
-        Me.ButtonBudgeting.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonBudgeting.Location = New System.Drawing.Point(10, 10)
-        Me.ButtonBudgeting.Margin = New System.Windows.Forms.Padding(10)
-        Me.ButtonBudgeting.Name = "ButtonBudgeting"
-        Me.ButtonBudgeting.Size = New System.Drawing.Size(304, 100)
-        Me.ButtonBudgeting.TabIndex = 0
-        Me.ButtonBudgeting.Text = "Budgeting"
-        Me.ButtonBudgeting.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
         '
@@ -513,10 +499,8 @@ Partial Class TitlePage
     Friend WithEvents ComboBoxCategories As ComboBox
     Friend WithEvents BoxMenu As GroupBox
     Friend WithEvents LayoutPanelMenu As TableLayoutPanel
-    Friend WithEvents ButtonHelp As Button
     Friend WithEvents ButtonReports As Button
     Friend WithEvents ButtonCalendar As Button
-    Friend WithEvents ButtonBudgeting As Button
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents DataTransactionList As DataGridView
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
@@ -527,4 +511,5 @@ Partial Class TitlePage
     Friend WithEvents UpperContainer1 As FlowLayoutPanel
     Friend WithEvents Title As Label
     Friend WithEvents MainTitle As Label
+    Friend WithEvents ButtonHelp As Button
 End Class

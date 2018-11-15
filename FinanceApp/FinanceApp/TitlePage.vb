@@ -30,10 +30,6 @@ Public Class TitlePage
         End If
     End Sub
 
-    Private Sub ButtonBudgeting_Click(sender As Object, e As EventArgs) Handles ButtonBudgeting.Click
-        Budgeting.Show()
-    End Sub
-
     Private Sub ButtonCalendar_Click(sender As Object, e As EventArgs) Handles ButtonCalendar.Click
         Calendar.Show()
     End Sub
@@ -193,7 +189,8 @@ Public Class TitlePage
 
     Sub UpdateButton()
         If TextBoxTransactionAmount.Text = "" Or TextBoxTransactionDescription.Text = "" _
-            Or ComboBoxCategories.Text = "" Or MaskedTextBoxTransactionDate.Text = "  /  /    " Then
+            Or ComboBoxCategories.Text = "" Or MaskedTextBoxTransactionDate.Text = "  /  /    " _
+            Or (Not (RadioButtonExpense.Checked) And Not (RadioButtonIncome.Checked)) Then
             ButtonAddTransaction.Enabled = False
         Else
             ButtonAddTransaction.Enabled = True
@@ -213,14 +210,6 @@ Public Class TitlePage
         Next
         Return -1
     End Function
-
-    Private Sub ComboBoxCategories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxCategories.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub TextBoxTotal_TextChanged(sender As Object, e As EventArgs) Handles TextBoxTotal.TextChanged
-
-    End Sub
 
 #End Region
 
