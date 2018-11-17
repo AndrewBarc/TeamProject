@@ -172,7 +172,7 @@ Partial Class TitlePage
         Me.RadioButtonExpense.Name = "RadioButtonExpense"
         Me.RadioButtonExpense.Padding = New System.Windows.Forms.Padding(0, 0, 30, 0)
         Me.RadioButtonExpense.Size = New System.Drawing.Size(96, 42)
-        Me.RadioButtonExpense.TabIndex = 4
+        Me.RadioButtonExpense.TabIndex = 3
         Me.RadioButtonExpense.TabStop = True
         Me.RadioButtonExpense.Text = "Expense"
         Me.RadioButtonExpense.UseVisualStyleBackColor = True
@@ -185,7 +185,7 @@ Partial Class TitlePage
         Me.RadioButtonIncome.Name = "RadioButtonIncome"
         Me.RadioButtonIncome.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.RadioButtonIncome.Size = New System.Drawing.Size(90, 42)
-        Me.RadioButtonIncome.TabIndex = 3
+        Me.RadioButtonIncome.TabIndex = 2
         Me.RadioButtonIncome.TabStop = True
         Me.RadioButtonIncome.Text = "Income"
         Me.RadioButtonIncome.UseVisualStyleBackColor = True
@@ -207,7 +207,7 @@ Partial Class TitlePage
         Me.TextBoxTransactionAmount.Location = New System.Drawing.Point(3, 291)
         Me.TextBoxTransactionAmount.Name = "TextBoxTransactionAmount"
         Me.TextBoxTransactionAmount.Size = New System.Drawing.Size(317, 20)
-        Me.TextBoxTransactionAmount.TabIndex = 2
+        Me.TextBoxTransactionAmount.TabIndex = 4
         '
         'TextBoxTransactionDescription
         '
@@ -307,7 +307,7 @@ Partial Class TitlePage
         Me.ButtonHelp.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonHelp.Name = "ButtonHelp"
         Me.ButtonHelp.Size = New System.Drawing.Size(304, 141)
-        Me.ButtonHelp.TabIndex = 3
+        Me.ButtonHelp.TabIndex = 9
         Me.ButtonHelp.Text = "Help"
         Me.ButtonHelp.UseVisualStyleBackColor = True
         '
@@ -318,7 +318,7 @@ Partial Class TitlePage
         Me.ButtonReports.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonReports.Name = "ButtonReports"
         Me.ButtonReports.Size = New System.Drawing.Size(304, 140)
-        Me.ButtonReports.TabIndex = 2
+        Me.ButtonReports.TabIndex = 8
         Me.ButtonReports.Text = "Financial Reports"
         Me.ButtonReports.UseVisualStyleBackColor = True
         '
@@ -329,7 +329,7 @@ Partial Class TitlePage
         Me.ButtonCalendar.Margin = New System.Windows.Forms.Padding(10)
         Me.ButtonCalendar.Name = "ButtonCalendar"
         Me.ButtonCalendar.Size = New System.Drawing.Size(304, 140)
-        Me.ButtonCalendar.TabIndex = 1
+        Me.ButtonCalendar.TabIndex = 7
         Me.ButtonCalendar.Text = "Calendar"
         Me.ButtonCalendar.UseVisualStyleBackColor = True
         '

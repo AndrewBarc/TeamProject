@@ -27,8 +27,10 @@ Public Class Calendar
         in_stream.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub SearchButtonCategory_Click(sender As Object, e As EventArgs) Handles SearchButtonCategory.Click
         dt.Rows.Clear()
+        TotalAmount = 0
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
         Dim filePath As String
         Dim line As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -47,8 +49,10 @@ Public Class Calendar
         in_stream.Close()
     End Sub
 
-    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
+    Private Sub SearchButtonDate_Click(sender As Object, e As EventArgs) Handles SearchButtonDate.Click
         dt.Clear()
+        TotalAmount = 0
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
         Dim filePath As String
         Dim line As String
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -99,7 +103,7 @@ Public Class Calendar
 
         DataGridView1.DataSource = dt
         UpdateTotal(in_Amount)
-        TextBox1.Text = TotalAmount.ToString()
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
 
     End Sub
 

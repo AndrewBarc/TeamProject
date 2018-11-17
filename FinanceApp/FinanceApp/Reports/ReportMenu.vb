@@ -7,6 +7,7 @@
     Private Sub ReportMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddColumnsToGridView()
     End Sub
+
 #Region "Data Table"
 
     Dim dt As New DataTable
@@ -41,7 +42,7 @@
 
         reportData.DataSource = dt
         UpdateTotal(in_Amount)
-        TextBox1.Text = TotalAmount.ToString()
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
 
     End Sub
 
@@ -68,12 +69,10 @@
         MonthReport.Show()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
     Sub GetYear()
         dt.Clear()
+        TotalAmount = 0
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
         year = YearReport.get_year()
         Dim filePath As String
         Dim line As String
@@ -102,6 +101,8 @@
 
     Sub GetMonth()
         dt.Clear()
+        TotalAmount = 0
+        TextBoxTotalSorted.Text = TotalAmount.ToString()
         year = MonthReport.get_year()
         month = MonthReport.get_month()
         Dim filePath As String

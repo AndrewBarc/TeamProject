@@ -28,14 +28,14 @@ Partial Class Calendar
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.SearchButton = New System.Windows.Forms.Button()
+        Me.SearchButtonDate = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SearchButtonCategory = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxTotalSorted = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -92,10 +92,10 @@ Partial Class Calendar
         '
         Me.TableLayoutPanel5.ColumnCount = 1
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.SearchButton, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.SearchButtonDate, 0, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.ComboBox1, 0, 2)
         Me.TableLayoutPanel5.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.Button1, 0, 3)
+        Me.TableLayoutPanel5.Controls.Add(Me.SearchButtonCategory, 0, 3)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 47)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -107,15 +107,15 @@ Partial Class Calendar
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(231, 123)
         Me.TableLayoutPanel5.TabIndex = 3
         '
-        'SearchButton
+        'SearchButtonDate
         '
-        Me.SearchButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchButton.Location = New System.Drawing.Point(3, 3)
-        Me.SearchButton.Name = "SearchButton"
-        Me.SearchButton.Size = New System.Drawing.Size(225, 23)
-        Me.SearchButton.TabIndex = 0
-        Me.SearchButton.Text = "Search By Date"
-        Me.SearchButton.UseVisualStyleBackColor = True
+        Me.SearchButtonDate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SearchButtonDate.Location = New System.Drawing.Point(3, 3)
+        Me.SearchButtonDate.Name = "SearchButtonDate"
+        Me.SearchButtonDate.Size = New System.Drawing.Size(225, 23)
+        Me.SearchButtonDate.TabIndex = 0
+        Me.SearchButtonDate.Text = "Search By Date"
+        Me.SearchButtonDate.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -139,15 +139,15 @@ Partial Class Calendar
         Me.Label2.Text = "Select a Category to Search all Transactions by"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
-        'Button1
+        'SearchButtonCategory
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 92)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(225, 28)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Search By Category"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SearchButtonCategory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SearchButtonCategory.Location = New System.Drawing.Point(3, 92)
+        Me.SearchButtonCategory.Name = "SearchButtonCategory"
+        Me.SearchButtonCategory.Size = New System.Drawing.Size(225, 28)
+        Me.SearchButtonCategory.TabIndex = 3
+        Me.SearchButtonCategory.Text = "Search By Category"
+        Me.SearchButtonCategory.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
@@ -155,7 +155,7 @@ Partial Class Calendar
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.MonthCalendar1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBoxTotalSorted, 0, 2)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -184,15 +184,15 @@ Partial Class Calendar
         Me.Label1.Text = "Total Amount of Sorted Transactions"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
-        'TextBox1
+        'TextBoxTotalSorted
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(3, 241)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(231, 20)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBoxTotalSorted.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxTotalSorted.Location = New System.Drawing.Point(3, 241)
+        Me.TextBoxTotalSorted.Name = "TextBoxTotalSorted"
+        Me.TextBoxTotalSorted.ReadOnly = True
+        Me.TextBoxTotalSorted.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxTotalSorted.TabIndex = 2
+        Me.TextBoxTotalSorted.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TableLayoutPanel4
         '
@@ -248,12 +248,12 @@ Partial Class Calendar
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents SearchButton As Button
+    Friend WithEvents SearchButtonDate As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents SearchButtonCategory As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxTotalSorted As TextBox
 End Class

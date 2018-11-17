@@ -21,8 +21,11 @@ Public Class TitlePage
                 AddRowToGridView()
             Loop
             in_stream.Close()
-            DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
-
+            If DataTransactionList.Rows.Count = 0 Then
+                ' Do Nothing
+            Else
+                DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+            End If
         Else
             Dim input As FileStream = File.Create(filePath)
             MessageBox.Show("File 'data.'txt' created in Documents.")
@@ -47,6 +50,10 @@ Public Class TitlePage
         ComboBoxCategories.ResetText()
 
         DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+
+        If DataTransactionList.Rows.Count > 0 Then
+            ButtonRemove.Enabled = True
+        End If
 
         SavetoFile()
     End Sub
@@ -84,6 +91,10 @@ Public Class TitlePage
         End If
         TextBoxTotal.Text = TotalAmount.ToString()
         DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
+
+        If DataTransactionList.Rows.Count = 0 Then
+            ButtonRemove.Enabled = False
+        End If
 
         SavetoFile()
     End Sub

@@ -30,7 +30,7 @@ Partial Class ReportMenu
         Me.reportData = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxTotalSorted = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.reportData, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,7 +115,7 @@ Partial Class ReportMenu
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.23894!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.76106!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TextBoxTotalSorted, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 407)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -130,16 +130,17 @@ Partial Class ReportMenu
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(202, 36)
+        Me.Label1.Size = New System.Drawing.Size(203, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Total Amount From Selected Time Period"
         '
-        'TextBox1
+        'TextBoxTotalSorted
         '
-        Me.TextBox1.Location = New System.Drawing.Point(211, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxTotalSorted.Location = New System.Drawing.Point(212, 3)
+        Me.TextBoxTotalSorted.Name = "TextBoxTotalSorted"
+        Me.TextBoxTotalSorted.ReadOnly = True
+        Me.TextBoxTotalSorted.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxTotalSorted.TabIndex = 1
         '
         'ReportMenu
         '
@@ -167,5 +168,5 @@ Partial Class ReportMenu
     Friend WithEvents reportData As DataGridView
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxTotalSorted As TextBox
 End Class
