@@ -83,6 +83,9 @@ Public Class TitlePage
     End Sub
 
     Private Sub ButtonRemove_Click(sender As Object, e As EventArgs) Handles ButtonRemove.Click
+        If DataTransactionList.Rows.Count = 0 Then
+            Exit Sub
+        End If
         Dim DAmount As Double = DataTransactionList.CurrentRow.Cells(3).Value
         If DAmount < 0 Then
             TotalAmount = TotalAmount - DAmount
