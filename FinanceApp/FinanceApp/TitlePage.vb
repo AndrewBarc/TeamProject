@@ -51,10 +51,6 @@ Public Class TitlePage
 
         DataTransactionList.Sort(DataTransactionList.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
 
-        If DataTransactionList.Rows.Count > 0 Then
-            ButtonRemove.Enabled = True
-        End If
-
         SavetoFile()
     End Sub
 
@@ -94,10 +90,6 @@ Public Class TitlePage
         End If
         TextBoxTotal.Text = TotalAmount.ToString()
         DataTransactionList.Rows.Remove(DataTransactionList.CurrentRow)
-
-        If DataTransactionList.Rows.Count = 0 Then
-            ButtonRemove.Enabled = False
-        End If
 
         SavetoFile()
     End Sub
