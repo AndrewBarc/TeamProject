@@ -350,8 +350,13 @@ Partial Class TitlePage
         '
         'DataTransactionList
         '
+        Me.DataTransactionList.AllowUserToAddRows = False
+        Me.DataTransactionList.AllowUserToDeleteRows = False
+        Me.DataTransactionList.AllowUserToResizeColumns = False
+        Me.DataTransactionList.AllowUserToResizeRows = False
         Me.DataTransactionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataTransactionList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataTransactionList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataTransactionList.Location = New System.Drawing.Point(3, 3)
         Me.DataTransactionList.Name = "DataTransactionList"
         Me.DataTransactionList.Size = New System.Drawing.Size(437, 395)
