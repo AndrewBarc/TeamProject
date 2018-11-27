@@ -30,7 +30,6 @@ Partial Class Calendar
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.SearchButtonDate = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.SearchButtonCategory = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
@@ -38,6 +37,7 @@ Partial Class Calendar
         Me.TextBoxTotalSorted = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
@@ -49,39 +49,37 @@ Partial Class Calendar
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.35404!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.64596!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.52675!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.47325!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(243, 486)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.MaskedTextBox1, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 0, 1)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 310)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 267)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.4386!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.5614!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(237, 173)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.74829!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.25172!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(237, 216)
         Me.TableLayoutPanel3.TabIndex = 3
         '
         'MaskedTextBox1
         '
-        Me.MaskedTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.MaskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(3, 13)
         Me.MaskedTextBox1.Mask = "00/00/0000"
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.Size = New System.Drawing.Size(231, 20)
@@ -91,20 +89,19 @@ Partial Class Calendar
         'TableLayoutPanel5
         '
         Me.TableLayoutPanel5.ColumnCount = 1
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.SearchButtonDate, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.ComboBox1, 0, 2)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.SearchButtonCategory, 0, 3)
+        Me.TableLayoutPanel5.Controls.Add(Me.ComboBox1, 0, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.SearchButtonCategory, 0, 2)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 47)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 39)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 4
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(231, 123)
+        Me.TableLayoutPanel5.RowCount = 3
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(231, 174)
         Me.TableLayoutPanel5.TabIndex = 3
         '
         'SearchButtonDate
@@ -112,39 +109,28 @@ Partial Class Calendar
         Me.SearchButtonDate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SearchButtonDate.Location = New System.Drawing.Point(3, 3)
         Me.SearchButtonDate.Name = "SearchButtonDate"
-        Me.SearchButtonDate.Size = New System.Drawing.Size(225, 23)
+        Me.SearchButtonDate.Size = New System.Drawing.Size(225, 51)
         Me.SearchButtonDate.TabIndex = 0
         Me.SearchButtonDate.Text = "Search By Date"
         Me.SearchButtonDate.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
-        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Bills", "Dining", "Education", "Entertainment", "Groceries", "Health Care", "Home", "Job Income", "Office", "Personal Care", "Pets", "Shopping", "Travel"})
-        Me.ComboBox1.Location = New System.Drawing.Point(3, 61)
+        Me.ComboBox1.Location = New System.Drawing.Point(3, 90)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(225, 21)
         Me.ComboBox1.Sorted = True
         Me.ComboBox1.TabIndex = 1
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 29)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(225, 29)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Select a Category to Search all Transactions by"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        '
         'SearchButtonCategory
         '
         Me.SearchButtonCategory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchButtonCategory.Location = New System.Drawing.Point(3, 92)
+        Me.SearchButtonCategory.Location = New System.Drawing.Point(3, 117)
         Me.SearchButtonCategory.Name = "SearchButtonCategory"
-        Me.SearchButtonCategory.Size = New System.Drawing.Size(225, 28)
+        Me.SearchButtonCategory.Size = New System.Drawing.Size(225, 54)
         Me.SearchButtonCategory.TabIndex = 3
         Me.SearchButtonCategory.Text = "Search By Category"
         Me.SearchButtonCategory.UseVisualStyleBackColor = True
@@ -152,18 +138,20 @@ Partial Class Calendar
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.MonthCalendar1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBoxTotalSorted, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 3)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.72758!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.27242!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(237, 301)
+        Me.TableLayoutPanel2.RowCount = 4
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(237, 258)
         Me.TableLayoutPanel2.TabIndex = 4
         '
         'MonthCalendar1
@@ -177,9 +165,9 @@ Partial Class Calendar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(3, 195)
+        Me.Label1.Location = New System.Drawing.Point(3, 180)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(231, 43)
+        Me.Label1.Size = New System.Drawing.Size(231, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Total Amount of Sorted Transactions"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -187,7 +175,7 @@ Partial Class Calendar
         'TextBoxTotalSorted
         '
         Me.TextBoxTotalSorted.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxTotalSorted.Location = New System.Drawing.Point(3, 241)
+        Me.TextBoxTotalSorted.Location = New System.Drawing.Point(3, 208)
         Me.TextBoxTotalSorted.Name = "TextBoxTotalSorted"
         Me.TextBoxTotalSorted.ReadOnly = True
         Me.TextBoxTotalSorted.Size = New System.Drawing.Size(231, 20)
@@ -206,7 +194,7 @@ Partial Class Calendar
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(441, 486)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(459, 486)
         Me.TableLayoutPanel4.TabIndex = 1
         '
         'DataGridView1
@@ -215,15 +203,26 @@ Partial Class Calendar
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(435, 480)
+        Me.DataGridView1.Size = New System.Drawing.Size(453, 480)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 230)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(231, 28)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Search either by Date or by Category"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'Calendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(684, 486)
+        Me.ClientSize = New System.Drawing.Size(702, 486)
         Me.Controls.Add(Me.TableLayoutPanel4)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "Calendar"
@@ -233,7 +232,6 @@ Partial Class Calendar
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel5.ResumeLayout(False)
-        Me.TableLayoutPanel5.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
@@ -250,10 +248,10 @@ Partial Class Calendar
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents SearchButtonDate As Button
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents SearchButtonCategory As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBoxTotalSorted As TextBox
+    Friend WithEvents Label2 As Label
 End Class
