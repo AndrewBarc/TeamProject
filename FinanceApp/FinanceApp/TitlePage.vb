@@ -99,6 +99,11 @@ Public Class TitlePage
         MessageBox.Show("Data Saved")
     End Sub
 
+    Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
+        Dim helpvideo As String = "https://drive.google.com/open?id=1D74ad66l9pdkRWIvbFJVCFgYlA6M2Mz4"
+        Process.Start(helpvideo)
+    End Sub
+
 #End Region
 
 #Region "Data Table"
