@@ -25,7 +25,6 @@ Partial Class ReportMenu
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.YearButton = New System.Windows.Forms.Button()
         Me.MonthButton = New System.Windows.Forms.Button()
-        Me.SpecificButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.reportData = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -43,12 +42,10 @@ Partial Class ReportMenu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.YearButton, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.MonthButton, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.SpecificButton, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(200, 446)
@@ -59,7 +56,7 @@ Partial Class ReportMenu
         Me.YearButton.Dock = System.Windows.Forms.DockStyle.Fill
         Me.YearButton.Location = New System.Drawing.Point(3, 3)
         Me.YearButton.Name = "YearButton"
-        Me.YearButton.Size = New System.Drawing.Size(194, 142)
+        Me.YearButton.Size = New System.Drawing.Size(194, 217)
         Me.YearButton.TabIndex = 0
         Me.YearButton.Text = "Year Report"
         Me.YearButton.UseVisualStyleBackColor = True
@@ -67,22 +64,12 @@ Partial Class ReportMenu
         'MonthButton
         '
         Me.MonthButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MonthButton.Location = New System.Drawing.Point(3, 151)
+        Me.MonthButton.Location = New System.Drawing.Point(3, 226)
         Me.MonthButton.Name = "MonthButton"
-        Me.MonthButton.Size = New System.Drawing.Size(194, 142)
+        Me.MonthButton.Size = New System.Drawing.Size(194, 217)
         Me.MonthButton.TabIndex = 1
         Me.MonthButton.Text = "Month Report"
         Me.MonthButton.UseVisualStyleBackColor = True
-        '
-        'SpecificButton
-        '
-        Me.SpecificButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SpecificButton.Location = New System.Drawing.Point(3, 299)
-        Me.SpecificButton.Name = "SpecificButton"
-        Me.SpecificButton.Size = New System.Drawing.Size(194, 144)
-        Me.SpecificButton.TabIndex = 2
-        Me.SpecificButton.Text = "Specific Report"
-        Me.SpecificButton.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
@@ -164,7 +151,6 @@ Partial Class ReportMenu
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents YearButton As Button
     Friend WithEvents MonthButton As Button
-    Friend WithEvents SpecificButton As Button
     Friend WithEvents reportData As DataGridView
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
