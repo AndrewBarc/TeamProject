@@ -25,8 +25,8 @@ Partial Class MonthReport
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.YearBox = New System.Windows.Forms.TextBox()
         Me.MonthBox = New System.Windows.Forms.TextBox()
+        Me.YearBox = New System.Windows.Forms.TextBox()
         Me.MonthButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -35,21 +35,23 @@ Partial Class MonthReport
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(38, 76)
+        Me.Label2.Location = New System.Drawing.Point(25, 94)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 13)
+        Me.Label2.Size = New System.Drawing.Size(191, 17)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Please Select Month"
+        Me.Label2.Text = "Please Select Month (e.g 05)"
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(42, 10)
+        Me.Label1.Location = New System.Drawing.Point(21, 12)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 13)
+        Me.Label1.Size = New System.Drawing.Size(198, 17)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Please Select Year"
+        Me.Label1.Text = "Please Select Year (e.g 2015)"
         '
         'TableLayoutPanel1
         '
@@ -62,6 +64,7 @@ Partial Class MonthReport
         Me.TableLayoutPanel1.Controls.Add(Me.MonthButton, 0, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
@@ -70,42 +73,45 @@ Partial Class MonthReport
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(181, 169)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(241, 208)
         Me.TableLayoutPanel1.TabIndex = 1
-        '
-        'YearBox
-        '
-        Me.YearBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.YearBox.Location = New System.Drawing.Point(40, 39)
-        Me.YearBox.Name = "YearBox"
-        Me.YearBox.Size = New System.Drawing.Size(100, 20)
-        Me.YearBox.TabIndex = 6
         '
         'MonthBox
         '
         Me.MonthBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MonthBox.Location = New System.Drawing.Point(40, 105)
+        Me.MonthBox.Location = New System.Drawing.Point(54, 132)
+        Me.MonthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MonthBox.Name = "MonthBox"
-        Me.MonthBox.Size = New System.Drawing.Size(100, 20)
+        Me.MonthBox.Size = New System.Drawing.Size(132, 22)
         Me.MonthBox.TabIndex = 7
+        '
+        'YearBox
+        '
+        Me.YearBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.YearBox.Location = New System.Drawing.Point(54, 50)
+        Me.YearBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.YearBox.Name = "YearBox"
+        Me.YearBox.Size = New System.Drawing.Size(132, 22)
+        Me.YearBox.TabIndex = 6
         '
         'MonthButton
         '
         Me.MonthButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MonthButton.Location = New System.Drawing.Point(3, 135)
+        Me.MonthButton.Location = New System.Drawing.Point(4, 168)
+        Me.MonthButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MonthButton.Name = "MonthButton"
-        Me.MonthButton.Size = New System.Drawing.Size(175, 31)
+        Me.MonthButton.Size = New System.Drawing.Size(233, 36)
         Me.MonthButton.TabIndex = 8
         Me.MonthButton.Text = "Search"
         Me.MonthButton.UseVisualStyleBackColor = True
         '
         'MonthReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(181, 167)
+        Me.ClientSize = New System.Drawing.Size(241, 206)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MonthReport"
         Me.Text = "MonthReport"
         Me.TableLayoutPanel1.ResumeLayout(False)

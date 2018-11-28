@@ -67,7 +67,11 @@ Public Class Calendar
                 AddRowToGridView()
             End If
         Loop
-        DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+        If DataGridView1.Columns("Date") Is Nothing Then
+            MessageBox.Show("The date you entered did not have any transactions.")
+        Else
+            DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+        End If
         in_stream.Close()
     End Sub
 

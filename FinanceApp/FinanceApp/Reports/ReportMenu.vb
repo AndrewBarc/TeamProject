@@ -73,7 +73,7 @@
         dt.Clear()
         TotalAmount = 0
         TextBoxTotalSorted.Text = TotalAmount.ToString()
-        year = YearReport.get_year()
+        year = YearReport.get_year() 'year input from user
         Dim filePath As String
         Dim line As String
         Dim date_year As String
@@ -93,8 +93,10 @@
         Loop
         If IsDataGridViewEmpty(reportData) = True Then
             MessageBox.Show("No transactions from selected year.")
-        End If
+
+        Else
         reportData.Sort(reportData.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+        End If
         in_stream.Close()
 
     End Sub
@@ -107,6 +109,7 @@
         month = MonthReport.get_month()
         Dim filePath As String
         Dim line As String
+        Dim date_year As String
         Dim date_month As String
 
         filePath = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "data.txt")
@@ -114,8 +117,9 @@
         Do While in_stream.Peek() <> -1
             line = in_stream.ReadLine() & vbNewLine
             date_month = line.Substring(0, 2)
+            date_year = line.Substring(GetNthIndex(line, "/", 2) + 1, 4)
             in_Date = line.Substring(0, 10)
-            If date_month = month Then
+            If date_month = month And date_year = year Then
                 in_Description = line.Substring(GetNthIndex(line, ",", 1) + 1, (GetNthIndex(line, ",", 2) - GetNthIndex(line, ",", 1)) - 1)
                 in_Category = line.Substring(GetNthIndex(line, ",", 2) + 1, GetNthIndex(line, ",", 3) - (GetNthIndex(line, ",", 2)) - 1)
                 in_Amount = line.Substring(GetNthIndex(line, ",", 3) + 1, GetNthIndex(line, ",", 4) - (GetNthIndex(line, ",", 3)) - 1)
@@ -123,9 +127,13 @@
             End If
         Loop
         If IsDataGridViewEmpty(reportData) = True Then
-            MessageBox.Show("No transactions from selected year.")
+            MessageBox.Show("No transactions from selected date.")
+            If month > 12 Or month < 1 Then
+                MessageBox.Show("Incorrect month number")
+            End If
+        Else
+            reportData.Sort(reportData.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
         End If
-        reportData.Sort(reportData.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
         in_stream.Close()
 
     End Sub
