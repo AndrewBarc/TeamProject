@@ -93,6 +93,9 @@
         Loop
         If IsDataGridViewEmpty(reportData) = True Then
             MessageBox.Show("No transactions from selected year.")
+            If year = "" Then
+                MessageBox.Show("Please input a year")
+            End If
 
         Else
         reportData.Sort(reportData.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
@@ -128,7 +131,9 @@
         Loop
         If IsDataGridViewEmpty(reportData) = True Then
             MessageBox.Show("No transactions from selected date.")
-            If month > 12 Or month < 1 Then
+            If month = "" Or year = "" Then
+                MessageBox.Show("Not all fields were filled out")
+            ElseIf month > 12 Or month < 1 Then
                 MessageBox.Show("Incorrect month number")
             End If
         Else

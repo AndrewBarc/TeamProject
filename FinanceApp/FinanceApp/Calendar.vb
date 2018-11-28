@@ -45,7 +45,12 @@ Public Class Calendar
                 AddRowToGridView()
             End If
         Loop
-        DataGridView1.Sort(DataGridView1.Columns("Date"), System.ComponentModel.ListSortDirection.Descending)
+        If DataGridView1.Columns("Date") Is Nothing Then
+            MessageBox.Show("No category was selected")
+        Else
+            DataGridView1.Sort(DataGridView1.Columns("Date"), ComponentModel.ListSortDirection.Descending)
+        End If
+
         in_stream.Close()
     End Sub
 
